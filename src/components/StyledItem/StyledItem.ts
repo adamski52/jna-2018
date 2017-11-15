@@ -11,7 +11,7 @@ export class StyledItem extends Item {
     private _left:number;
     private _height:number;
     private _blur:number;
-    private _baseBlur:number = 30;
+    private _baseBlur:number = 20;
     private _baseWidth:number = 300;
     private _baseHeight:number = 300;
     private _origTop:number;
@@ -37,23 +37,26 @@ export class StyledItem extends Item {
 
     private setupDrag():void {
         let dragHandle:EventListener = (e:MouseEvent) => {
+            e.preventDefault();
             this.onDrag(e);
         };
 
+        let releaseOutsideHandler:EventListener = (e:MouseEvent) => {
+            e.preventDefault();
+            document.removeEventListener("mousemove", dragHandle);
+        };
+
         this.getContainer().addEventListener("mousedown", (e:MouseEvent) => {
+            e.preventDefault();
             this._mouseOriginX = e.screenX;
             this._mouseOriginY = e.screenY;
             this._origLeft = this._left;
             this._origTop = this._top;
 
-            console.log(this.getVisualBounds());
-
-            window.addEventListener("mousemove", dragHandle);
+            document.addEventListener("mousemove", dragHandle);
         });
 
-        this.getContainer().addEventListener("mouseup", () => {
-            window.removeEventListener("mousemove", dragHandle);
-        });
+        this.getContainer().addEventListener("mouseup", releaseOutsideHandler);
     }
 
     public render():void {
@@ -84,7 +87,7 @@ export class StyledItem extends Item {
     }
 
     public move(deltaTop:number, doRender:boolean = true):void {
-        this._top = this._top - (deltaTop * this._scale);
+        this._top = this._top - deltaTop * this._scale;
         if(doRender) {
             this.render();
         }

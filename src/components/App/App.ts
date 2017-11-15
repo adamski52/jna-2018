@@ -20,7 +20,7 @@ export class App extends Item {
         autoPlay(true);
     }
 
-    private figureTop(item:PortfolioItem):number {
+    private figureTop():number {
         let sum:number = 0;
         this._items.forEach((item:PortfolioItem) => {
             let bounds:IVisualBound = item.getVisualBounds();
@@ -38,7 +38,7 @@ export class App extends Item {
             item.setScale(scale);
 
             let left:number = Math.max(0, Math.random() * (window.innerWidth - item.getVisualBounds().width)),
-                top:number = this.figureTop(item);
+                top:number = this.figureTop();
 
             item.setPosition(left, top);
             this.getContainer().appendChild(item.getContainer());
@@ -48,7 +48,7 @@ export class App extends Item {
     }
 
     private setupScrolling():void {
-        document.getElementsByTagName("body")[0].addEventListener("scroll", () => {
+        document.addEventListener("scroll", () => {
             let delta:number = window.scrollY - this._prevY;
             this._prevY = window.scrollY;
 
