@@ -20,4 +20,11 @@ export class StyleUtils {
     public static width(element:HTMLElement, amount:number):void {
         element.style.width = amount + "px";
     }
+
+    public static scale(element:HTMLElement, amount:number):void {
+        element.style.transform = "scale(" + amount + ")";
+
+        let zIndex:number = (Math.round(10*amount)*100);
+        element.style.zIndex = zIndex.toString();
+    }
 }

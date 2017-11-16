@@ -3,30 +3,37 @@ import "./StyledItem.scss";
 import {StyleUtils} from "../StyleUtils";
 import {Item} from "../Item/Item";
 import {IVisualBound} from "../Interfaces";
+import {Tween, Easing} from "es6-tween";
 
 export class StyledItem extends Item {
     private _scale:number;
-    private _width:number;
+    private _fixedScale:number;
     private _top:number;
     private _left:number;
-    private _height:number;
     private _blur:number;
-    private _baseBlur:number = 20;
+    private _baseBlur:number = 30;
     private _baseWidth:number = 300;
     private _baseHeight:number = 300;
     private _origTop:number;
     private _origLeft:number;
     private _mouseOriginX:number;
     private _mouseOriginY:number;
+    private _tween:Tween;
+
+    private _dragHandle:EventListener = (e:MouseEvent) => {
+        e.preventDefault();
+        this.onDrag(e);
+    };
+
+    private _releaseOutsideHandler:EventListener = (e:MouseEvent) => {
+        e.preventDefault();
+        document.removeEventListener("mousemove", this._dragHandle);
+    };
 
     constructor(type:string = "div") {
         super(type);
         this.getContainer().classList.add("styled-item");
-        this.setupDrag();
-
-        this.setScale(1, false);
-        this.setPosition(0, 0, false);
-        this.render();
+        this.setupEvents();
     }
 
     private onDrag(e:MouseEvent):void {
@@ -35,46 +42,63 @@ export class StyledItem extends Item {
         this.render();
     }
 
-    private setupDrag():void {
-        let dragHandle:EventListener = (e:MouseEvent) => {
-            e.preventDefault();
-            this.onDrag(e);
-        };
+    private tweenScale(scale:number):void {
+        if(this._tween && this._tween.isPlaying()) {
+            this._tween.stop();
+        }
 
-        let releaseOutsideHandler:EventListener = (e:MouseEvent) => {
-            e.preventDefault();
-            document.removeEventListener("mousemove", dragHandle);
-        };
+        this._tween = new Tween(this)
+            .to({
+                _scale: scale
+            })
+            .duration(800)
+            .easing(Easing.Elastic.Out)
+            .on("update", () => {
+                this.setScale(this._scale);
+            })
+            .start();
+    }
 
+    private setupEvents():void {
         this.getContainer().addEventListener("mousedown", (e:MouseEvent) => {
             e.preventDefault();
+            this._releaseOutsideHandler(e);
             this._mouseOriginX = e.screenX;
             this._mouseOriginY = e.screenY;
             this._origLeft = this._left;
             this._origTop = this._top;
 
-            document.addEventListener("mousemove", dragHandle);
+            document.addEventListener("mousemove", this._dragHandle);
         });
 
-        this.getContainer().addEventListener("mouseup", releaseOutsideHandler);
+        this.getContainer().addEventListener("mouseup", this._releaseOutsideHandler);
+
+        this.getContainer().addEventListener("mouseenter", (e:MouseEvent) => {
+            this.tweenScale(1);
+        });
+
+        this.getContainer().addEventListener("mouseleave", (e:MouseEvent) => {
+            this.tweenScale(this._fixedScale);
+        });
     }
 
     public render():void {
-        StyleUtils.width(this.getContainer(), this._width);
-        StyleUtils.height(this.getContainer(), this._height);
+        StyleUtils.width(this.getContainer(), this._baseWidth);
+        StyleUtils.height(this.getContainer(), this._baseHeight);
         StyleUtils.top(this.getContainer(), this._top);
         StyleUtils.left(this.getContainer(), this._left);
         StyleUtils.blur(this.getContainer(), this._blur);
+        StyleUtils.scale(this.getContainer(), this._scale);
     }
 
     public getVisualBounds():IVisualBound {
         return {
             top: this._top,
             left: this._left,
-            right: this._left + this._width,
-            bottom: this._top + this._height,
-            height: this._height,
-            width: this._width,
+            right: this._left + this._baseWidth,
+            bottom: this._top + this._baseHeight,
+            height: this._baseHeight,
+            width: this._baseWidth,
             scale: this._scale
         };
     }
@@ -103,10 +127,11 @@ export class StyledItem extends Item {
     }
 
     public setScale(scale:number, doRender:boolean = true):void {
+        if(this._fixedScale === undefined) {
+            this._fixedScale = scale;
+        }
+
         this._scale = scale;
-        this._width = this._baseWidth * this._scale;
-        this._height = this._baseHeight * this._scale;
-        this.setPosition(this._left, this._top, false);
         this.setBlur(false);
 
         if(doRender) {

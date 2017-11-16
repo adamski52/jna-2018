@@ -1,4 +1,28 @@
 .portfolio-item {
   position: absolute;
+  background: url(https://github.com/adamski52/travis-ftpr/blob/master/thumbnail.jpg?raw=true) no-repeat center center #fff;
+  background-size: cover;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+  overflow: hidden;
+
+  &:hover {
+    .title {
+      opacity: 1;
+    }
+  }
+}
+
+$title-size: 25px;
+
+.title {
+  transition: all linear .3s;
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  height: $title-size;
+  line-height: $title-size;
+  width: 100%;
   background: #000;
+  color: #fff;
+  text-align: center;
 }

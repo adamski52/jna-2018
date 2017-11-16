@@ -1,4 +1,4 @@
-import {autoPlay} from 'es6-tween/src'
+import {autoPlay} from 'es6-tween'
 
 import "./App.scss";
 import {PortfolioItem} from "../PortfolioItem/PortfolioItem";
@@ -31,13 +31,13 @@ export class App extends Item {
     }
 
     private addItems():void {
-        for(let i:number = 0; i < 10; i++) {
+        for(let i:number = 0; i < 100; i++) {
             let item:PortfolioItem = new PortfolioItem(),
-                scale:number = Math.random()+.5;
+                scale:number = .1 + (Math.random() *.8);
 
             item.setScale(scale);
 
-            let left:number = Math.max(0, Math.random() * (window.innerWidth - item.getVisualBounds().width)),
+            let left:number = Math.max(0, -item.getVisualBounds().width + Math.random() * (window.innerWidth)),
                 top:number = this.figureTop();
 
             item.setPosition(left, top);
