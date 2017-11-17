@@ -38,6 +38,9 @@ const loaders = {
 const config = {
     context: __dirname + '/src',
     entry: {
+        fetch: [
+            'whatwg-fetch'
+        ],
         app: [
             __dirname + '/src/index.ts'
         ]
@@ -92,5 +95,6 @@ const config = {
         ]
     }
 };
+
 
 module.exports = config;

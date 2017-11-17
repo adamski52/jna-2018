@@ -4,6 +4,8 @@ import "./App.scss";
 import {PortfolioItem} from "../PortfolioItem/PortfolioItem";
 import {Item} from "../Item/Item";
 import {IVisualBound} from "../Interfaces";
+import {PortfolioItemService} from "../PortfolioItem/PortfolioItem.service";
+import {ErrorService} from "../Error.service";
 
 export class App extends Item {
     private _prevY:number = 0;
@@ -18,6 +20,16 @@ export class App extends Item {
         this.setupScrolling();
 
         autoPlay(true);
+
+        PortfolioItemService.subscribe((response:any) => {
+            console.log("success", response);
+        });
+
+        ErrorService.subscribe((err:any) => {
+            console.log("err", err);
+        });
+
+        PortfolioItemService.get();
     }
 
     private figureTop():number {
