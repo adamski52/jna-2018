@@ -12,7 +12,10 @@ export class PortfolioItem extends StyledItem {
 
         this._title = new Item("h3");
         this._title.getContainer().classList.add("title");
-        this._title.getContainer().innerText = "LOL";
         this.getContainer().appendChild(this._title.getContainer());
+    }
+
+    protected setTitle(title:string):void {
+        this._title.getContainer().innerText = title;
     }
 }

@@ -1,0 +1,1449 @@
+[
+  {
+    "id": "6082494395",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1805389080,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "ea8e9cc5488f9e5721e32a5949fd6aa14e9dc7b4",
+      "before": "fca62ec022eda753d9ab78084b198ce51c08f094",
+      "commits": [
+        {
+          "sha": "ea8e9cc5488f9e5721e32a5949fd6aa14e9dc7b4",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "fixed some style issues.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/ea8e9cc5488f9e5721e32a5949fd6aa14e9dc7b4"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-06-16T19:02:59Z"
+  },
+  {
+    "id": "5999833100",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1779804262,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "fca62ec022eda753d9ab78084b198ce51c08f094",
+      "before": "24109f4c9ffeb088c8e76e44ec4fde6ccc63056f",
+      "commits": [
+        {
+          "sha": "fca62ec022eda753d9ab78084b198ce51c08f094",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "blog fixes.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/fca62ec022eda753d9ab78084b198ce51c08f094"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-06-05T00:57:52Z"
+  },
+  {
+    "id": "5997712091",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1778996972,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "24109f4c9ffeb088c8e76e44ec4fde6ccc63056f",
+      "before": "c74ee16c881fe0c6cdd2454013125ca52af7a954",
+      "commits": [
+        {
+          "sha": "24109f4c9ffeb088c8e76e44ec4fde6ccc63056f",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "fixed issue with repo rollover.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/24109f4c9ffeb088c8e76e44ec4fde6ccc63056f"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-06-04T04:02:41Z"
+  },
+  {
+    "id": "5997673127",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1778981724,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "c74ee16c881fe0c6cdd2454013125ca52af7a954",
+      "before": "de7edef11c9e5bac2ef9806c73ec90204bb4661b",
+      "commits": [
+        {
+          "sha": "c74ee16c881fe0c6cdd2454013125ca52af7a954",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "submenu styles.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/c74ee16c881fe0c6cdd2454013125ca52af7a954"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-06-04T03:29:16Z"
+  },
+  {
+    "id": "5997546756",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1778931815,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "de7edef11c9e5bac2ef9806c73ec90204bb4661b",
+      "before": "3321945b0bba76143d20ace5f7aa90e12adbd81c",
+      "commits": [
+        {
+          "sha": "de7edef11c9e5bac2ef9806c73ec90204bb4661b",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "added links.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/de7edef11c9e5bac2ef9806c73ec90204bb4661b"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-06-04T01:47:22Z"
+  },
+  {
+    "id": "5987466358",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1775700344,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/calendar-grid",
+      "head": "f14a1b61ef103283c176bbf70021d673412996e9",
+      "before": "4143809a6098459cdf93d5cb74b67384218b3153",
+      "commits": [
+        {
+          "sha": "f14a1b61ef103283c176bbf70021d673412996e9",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "initial styles.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/f14a1b61ef103283c176bbf70021d673412996e9"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-06-01T23:50:11Z"
+  },
+  {
+    "id": "5985094908",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "ref": "redesign/calendar-grid",
+      "ref_type": "branch",
+      "master_branch": "master",
+      "description": null,
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2017-06-01T17:33:23Z"
+  },
+  {
+    "id": "5967920305",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1769892028,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "3321945b0bba76143d20ace5f7aa90e12adbd81c",
+      "before": "306817cbcde22d85869500ce771059ad9900a71d",
+      "commits": [
+        {
+          "sha": "3321945b0bba76143d20ace5f7aa90e12adbd81c",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "fixed some z-index issues.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/3321945b0bba76143d20ace5f7aa90e12adbd81c"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-30T16:58:40Z"
+  },
+  {
+    "id": "5962921748",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1768322286,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "306817cbcde22d85869500ce771059ad9900a71d",
+      "before": "d664dfe7782ed95259038f41cf59c09702ed82eb",
+      "commits": [
+        {
+          "sha": "306817cbcde22d85869500ce771059ad9900a71d",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "ready to add links.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/306817cbcde22d85869500ce771059ad9900a71d"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-30T01:44:52Z"
+  },
+  {
+    "id": "5954869479",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1765484560,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "d664dfe7782ed95259038f41cf59c09702ed82eb",
+      "before": "e36514bfb2f397045c0e77d50c0de0090fdfd4a7",
+      "commits": [
+        {
+          "sha": "d664dfe7782ed95259038f41cf59c09702ed82eb",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "styles updated a little.  need to fix date icon on small screens.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/d664dfe7782ed95259038f41cf59c09702ed82eb"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-27T22:14:39Z"
+  },
+  {
+    "id": "5946279716",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1762686437,
+      "size": 2,
+      "distinct_size": 2,
+      "ref": "refs/heads/master",
+      "head": "e36514bfb2f397045c0e77d50c0de0090fdfd4a7",
+      "before": "e29960e05c1fccf90c66bc4efb9f953344984560",
+      "commits": [
+        {
+          "sha": "31cded7401557f9265e96730a0f4351d4573bd1f",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "finalized styles.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/31cded7401557f9265e96730a0f4351d4573bd1f"
+        },
+        {
+          "sha": "e36514bfb2f397045c0e77d50c0de0090fdfd4a7",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "simplified objects and fixed odd/even toggling.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/e36514bfb2f397045c0e77d50c0de0090fdfd4a7"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-26T02:41:00Z"
+  },
+  {
+    "id": "5914062329",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1752759275,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/master",
+      "head": "e29960e05c1fccf90c66bc4efb9f953344984560",
+      "before": "dabd9e101f9b25d2a6762a78a3f6651497017965",
+      "commits": [
+        {
+          "sha": "e29960e05c1fccf90c66bc4efb9f953344984560",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "updated styles including mobile.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/e29960e05c1fccf90c66bc4efb9f953344984560"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-22T00:02:00Z"
+  },
+  {
+    "id": "5913788888",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1752658114,
+      "size": 12,
+      "distinct_size": 0,
+      "ref": "refs/heads/master",
+      "head": "dabd9e101f9b25d2a6762a78a3f6651497017965",
+      "before": "fd1d2347116dd356c4ded9b196d8451909f65e62",
+      "commits": [
+        {
+          "sha": "42e087ddc02cff6de4e8efeaef10730a73f83bcb",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "more transition work.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/42e087ddc02cff6de4e8efeaef10730a73f83bcb"
+        },
+        {
+          "sha": "838d4154ce1ee323f36436cfe84acc20f196a41b",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "starting mobile styles.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/838d4154ce1ee323f36436cfe84acc20f196a41b"
+        },
+        {
+          "sha": "023c2c0e5cb9a12dd5dc4186c41bdeb4f83c7094",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "separation of for repos and commits.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/023c2c0e5cb9a12dd5dc4186c41bdeb4f83c7094"
+        },
+        {
+          "sha": "145b4dc883af4e7e5d2ab2adcca0c47e7392444c",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "optimizations on digest cycle.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/145b4dc883af4e7e5d2ab2adcca0c47e7392444c"
+        },
+        {
+          "sha": "ade115711669b00587be8c6f1aded7c748dbc90f",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "refactoring some tests before adding new stuff.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/ade115711669b00587be8c6f1aded7c748dbc90f"
+        },
+        {
+          "sha": "49cd8728a5bf8e1b89f2af11f0d368d9ae87ae55",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "test refactoring.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/49cd8728a5bf8e1b89f2af11f0d368d9ae87ae55"
+        },
+        {
+          "sha": "5828b6db9794b07ca151f33ae5e78044e467c3ee",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "literally in the middle of something.  have to switch machines.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/5828b6db9794b07ca151f33ae5e78044e467c3ee"
+        },
+        {
+          "sha": "55d3c868c0ba2f25d7b5b2323899f211cfe282fe",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "more progress on refactoring tests.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/55d3c868c0ba2f25d7b5b2323899f211cfe282fe"
+        },
+        {
+          "sha": "01ba033b7091a623657a617a164006219311b4fd",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "updated more tests.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/01ba033b7091a623657a617a164006219311b4fd"
+        },
+        {
+          "sha": "d1c21adfcd515cc315f852a69ef3d2b10bb83779",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "updated more tests.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/d1c21adfcd515cc315f852a69ef3d2b10bb83779"
+        },
+        {
+          "sha": "0c37f088c9f842f7b3e0b77dca448054b425fc22",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "tests fixed.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/0c37f088c9f842f7b3e0b77dca448054b425fc22"
+        },
+        {
+          "sha": "dabd9e101f9b25d2a6762a78a3f6651497017965",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "merged master",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/dabd9e101f9b25d2a6762a78a3f6651497017965"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-21T21:26:42Z"
+  },
+  {
+    "id": "5913787394",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1752657561,
+      "size": 2,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "dabd9e101f9b25d2a6762a78a3f6651497017965",
+      "before": "0c37f088c9f842f7b3e0b77dca448054b425fc22",
+      "commits": [
+        {
+          "sha": "42e087ddc02cff6de4e8efeaef10730a73f83bcb",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "more transition work.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/42e087ddc02cff6de4e8efeaef10730a73f83bcb"
+        },
+        {
+          "sha": "dabd9e101f9b25d2a6762a78a3f6651497017965",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "merged master",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/dabd9e101f9b25d2a6762a78a3f6651497017965"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-21T21:25:59Z"
+  },
+  {
+    "id": "5913774206",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1752652534,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "0c37f088c9f842f7b3e0b77dca448054b425fc22",
+      "before": "d1c21adfcd515cc315f852a69ef3d2b10bb83779",
+      "commits": [
+        {
+          "sha": "0c37f088c9f842f7b3e0b77dca448054b425fc22",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "tests fixed.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/0c37f088c9f842f7b3e0b77dca448054b425fc22"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-21T21:19:13Z"
+  },
+  {
+    "id": "5912057482",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1751994062,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "d1c21adfcd515cc315f852a69ef3d2b10bb83779",
+      "before": "01ba033b7091a623657a617a164006219311b4fd",
+      "commits": [
+        {
+          "sha": "d1c21adfcd515cc315f852a69ef3d2b10bb83779",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "updated more tests.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/d1c21adfcd515cc315f852a69ef3d2b10bb83779"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-21T04:29:23Z"
+  },
+  {
+    "id": "5912018971",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1751979341,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "01ba033b7091a623657a617a164006219311b4fd",
+      "before": "55d3c868c0ba2f25d7b5b2323899f211cfe282fe",
+      "commits": [
+        {
+          "sha": "01ba033b7091a623657a617a164006219311b4fd",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "updated more tests.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/01ba033b7091a623657a617a164006219311b4fd"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-21T03:56:28Z"
+  },
+  {
+    "id": "5886537309",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1743940450,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "55d3c868c0ba2f25d7b5b2323899f211cfe282fe",
+      "before": "5828b6db9794b07ca151f33ae5e78044e467c3ee",
+      "commits": [
+        {
+          "sha": "55d3c868c0ba2f25d7b5b2323899f211cfe282fe",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "more progress on refactoring tests.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/55d3c868c0ba2f25d7b5b2323899f211cfe282fe"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-17T03:14:18Z"
+  },
+  {
+    "id": "5884350401",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1743304493,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "5828b6db9794b07ca151f33ae5e78044e467c3ee",
+      "before": "49cd8728a5bf8e1b89f2af11f0d368d9ae87ae55",
+      "commits": [
+        {
+          "sha": "5828b6db9794b07ca151f33ae5e78044e467c3ee",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "literally in the middle of something.  have to switch machines.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/5828b6db9794b07ca151f33ae5e78044e467c3ee"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-16T19:47:18Z"
+  },
+  {
+    "id": "5883794592",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1743143775,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "49cd8728a5bf8e1b89f2af11f0d368d9ae87ae55",
+      "before": "ade115711669b00587be8c6f1aded7c748dbc90f",
+      "commits": [
+        {
+          "sha": "49cd8728a5bf8e1b89f2af11f0d368d9ae87ae55",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "test refactoring.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/49cd8728a5bf8e1b89f2af11f0d368d9ae87ae55"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-16T18:28:49Z"
+  },
+  {
+    "id": "5870180604",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1738916366,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "ade115711669b00587be8c6f1aded7c748dbc90f",
+      "before": "145b4dc883af4e7e5d2ab2adcca0c47e7392444c",
+      "commits": [
+        {
+          "sha": "ade115711669b00587be8c6f1aded7c748dbc90f",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "refactoring some tests before adding new stuff.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/ade115711669b00587be8c6f1aded7c748dbc90f"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-15T03:05:09Z"
+  },
+  {
+    "id": "5865306037",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1737067405,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "145b4dc883af4e7e5d2ab2adcca0c47e7392444c",
+      "before": "023c2c0e5cb9a12dd5dc4186c41bdeb4f83c7094",
+      "commits": [
+        {
+          "sha": "145b4dc883af4e7e5d2ab2adcca0c47e7392444c",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "optimizations on digest cycle.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/145b4dc883af4e7e5d2ab2adcca0c47e7392444c"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-13T02:33:41Z"
+  },
+  {
+    "id": "5862915137",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1736359227,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "023c2c0e5cb9a12dd5dc4186c41bdeb4f83c7094",
+      "before": "838d4154ce1ee323f36436cfe84acc20f196a41b",
+      "commits": [
+        {
+          "sha": "023c2c0e5cb9a12dd5dc4186c41bdeb4f83c7094",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "separation of for repos and commits.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/023c2c0e5cb9a12dd5dc4186c41bdeb4f83c7094"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-12T17:32:31Z"
+  },
+  {
+    "id": "5856164325",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1734244135,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "838d4154ce1ee323f36436cfe84acc20f196a41b",
+      "before": "fd1d2347116dd356c4ded9b196d8451909f65e62",
+      "commits": [
+        {
+          "sha": "838d4154ce1ee323f36436cfe84acc20f196a41b",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "starting mobile styles.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/838d4154ce1ee323f36436cfe84acc20f196a41b"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-11T19:50:33Z"
+  },
+  {
+    "id": "5855962696",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1734184805,
+      "size": 11,
+      "distinct_size": 0,
+      "ref": "refs/heads/master",
+      "head": "fd1d2347116dd356c4ded9b196d8451909f65e62",
+      "before": "74a8591e7565524b4dd98775133ca5e1a38891cc",
+      "commits": [
+        {
+          "sha": "0e7de2a254bf479d96963b5b51357b9862ac8590",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "layout almost done.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/0e7de2a254bf479d96963b5b51357b9862ac8590"
+        },
+        {
+          "sha": "6bae0357138b151935137da43020c9e4cad44338",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "normalized spacing.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/6bae0357138b151935137da43020c9e4cad44338"
+        },
+        {
+          "sha": "5a028780c9ad2337b45e295226c77082c84e5616",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "close to liking the design.  too simple.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/5a028780c9ad2337b45e295226c77082c84e5616"
+        },
+        {
+          "sha": "3a98406eb9aa767e9584633e1a55930ffef0ba05",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "very close to working.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/3a98406eb9aa767e9584633e1a55930ffef0ba05"
+        },
+        {
+          "sha": "b75e59ab6d3746991193086264abd8a00ffc9e68",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "working correctly.  needs proper colors.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/b75e59ab6d3746991193086264abd8a00ffc9e68"
+        },
+        {
+          "sha": "29c41e17d5b634ef955fd145b039bda703738427",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "optimized css.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/29c41e17d5b634ef955fd145b039bda703738427"
+        },
+        {
+          "sha": "5a8677717b15d3e8fe95fb74eb0e65f843f9e6f6",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "ready to theme.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/5a8677717b15d3e8fe95fb74eb0e65f843f9e6f6"
+        },
+        {
+          "sha": "1bb6dee70c4626cb19b2a37efa866a26f5d7f06f",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "themes looking good.  need to fix percentages.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/1bb6dee70c4626cb19b2a37efa866a26f5d7f06f"
+        },
+        {
+          "sha": "7f005ce81f991d8d088dbe62fb82691375190d32",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "tests fixed.  need to fix hide styles.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/7f005ce81f991d8d088dbe62fb82691375190d32"
+        },
+        {
+          "sha": "8508f77810390abfd2d98c3297369a6ba10fa349",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "resolving conflicts.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/8508f77810390abfd2d98c3297369a6ba10fa349"
+        },
+        {
+          "sha": "fd1d2347116dd356c4ded9b196d8451909f65e62",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "resolved conflicts.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/fd1d2347116dd356c4ded9b196d8451909f65e62"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-11T19:19:55Z"
+  },
+  {
+    "id": "5855960662",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1734184226,
+      "size": 7,
+      "distinct_size": 2,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "fd1d2347116dd356c4ded9b196d8451909f65e62",
+      "before": "7f005ce81f991d8d088dbe62fb82691375190d32",
+      "commits": [
+        {
+          "sha": "833f23afbf4d97d26f70b263ac2309f9d096100e",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "added blog item tests.  somehow missed them.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/833f23afbf4d97d26f70b263ac2309f9d096100e"
+        },
+        {
+          "sha": "e08a99dcec9bff897f503ddcc595af39ab859750",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "style changes in progress",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/e08a99dcec9bff897f503ddcc595af39ab859750"
+        },
+        {
+          "sha": "9d90f2f67bffc45456b886281e41b4181b798e7e",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "progress on redesign.  fun stuff soon.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/9d90f2f67bffc45456b886281e41b4181b798e7e"
+        },
+        {
+          "sha": "4076714c65fcca9932605cdd3f1f4e5b648b8c5a",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "ready for disabled state.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/4076714c65fcca9932605cdd3f1f4e5b648b8c5a"
+        },
+        {
+          "sha": "74a8591e7565524b4dd98775133ca5e1a38891cc",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "spinny style working pretty OK.",
+          "distinct": false,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/74a8591e7565524b4dd98775133ca5e1a38891cc"
+        },
+        {
+          "sha": "8508f77810390abfd2d98c3297369a6ba10fa349",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "resolving conflicts.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/8508f77810390abfd2d98c3297369a6ba10fa349"
+        },
+        {
+          "sha": "fd1d2347116dd356c4ded9b196d8451909f65e62",
+          "author": {
+            "email": "JADAMSK8@ford.com",
+            "name": "Adamski"
+          },
+          "message": "resolved conflicts.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/fd1d2347116dd356c4ded9b196d8451909f65e62"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-11T19:19:37Z"
+  },
+  {
+    "id": "5850190844",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1732371782,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "7f005ce81f991d8d088dbe62fb82691375190d32",
+      "before": "1bb6dee70c4626cb19b2a37efa866a26f5d7f06f",
+      "commits": [
+        {
+          "sha": "7f005ce81f991d8d088dbe62fb82691375190d32",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "tests fixed.  need to fix hide styles.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/7f005ce81f991d8d088dbe62fb82691375190d32"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-11T03:26:48Z"
+  },
+  {
+    "id": "5841340745",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1729619793,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "1bb6dee70c4626cb19b2a37efa866a26f5d7f06f",
+      "before": "5a8677717b15d3e8fe95fb74eb0e65f843f9e6f6",
+      "commits": [
+        {
+          "sha": "1bb6dee70c4626cb19b2a37efa866a26f5d7f06f",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "themes looking good.  need to fix percentages.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/1bb6dee70c4626cb19b2a37efa866a26f5d7f06f"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-10T00:28:08Z"
+  },
+  {
+    "id": "5833044087",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1727061946,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "5a8677717b15d3e8fe95fb74eb0e65f843f9e6f6",
+      "before": "29c41e17d5b634ef955fd145b039bda703738427",
+      "commits": [
+        {
+          "sha": "5a8677717b15d3e8fe95fb74eb0e65f843f9e6f6",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "ready to theme.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/5a8677717b15d3e8fe95fb74eb0e65f843f9e6f6"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-08T23:51:24Z"
+  },
+  {
+    "id": "5832795276",
+    "type": "PushEvent",
+    "actor": {
+      "id": 478369,
+      "login": "adamski52",
+      "display_login": "adamski52",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adamski52",
+      "avatar_url": "https://avatars.githubusercontent.com/u/478369?"
+    },
+    "repo": {
+      "id": 86275602,
+      "name": "adamski52/timeline-portfolio",
+      "url": "https://api.github.com/repos/adamski52/timeline-portfolio"
+    },
+    "payload": {
+      "push_id": 1726991792,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/redesign/fifty-fifty",
+      "head": "29c41e17d5b634ef955fd145b039bda703738427",
+      "before": "b75e59ab6d3746991193086264abd8a00ffc9e68",
+      "commits": [
+        {
+          "sha": "29c41e17d5b634ef955fd145b039bda703738427",
+          "author": {
+            "email": "jon@Jonathans-MacBook-Pro.local",
+            "name": "Jonathan Adamski"
+          },
+          "message": "optimized css.",
+          "distinct": true,
+          "url": "https://api.github.com/repos/adamski52/timeline-portfolio/commits/29c41e17d5b634ef955fd145b039bda703738427"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2017-05-08T22:55:40Z"
+  }
+]
