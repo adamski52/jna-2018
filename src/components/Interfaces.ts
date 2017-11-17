@@ -7,13 +7,3 @@ export interface IVisualBound {
     width:number;
     scale:number;
 }
-
-export interface ILanguage {
-    name: string;
-    iconClass: string;
-    percentage: number;
-};
-
-export interface ILanguageMeta {
-    [key: string]: number;
-};
