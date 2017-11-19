@@ -1,7 +1,6 @@
 import {autoPlay} from 'es6-tween'
 
 import "./App.scss";
-import {PortfolioItem} from "../PortfolioItem/PortfolioItem";
 import {Item} from "../Item/Item";
 import {IVisualBound} from "../Interfaces";
 import {ReposService} from "../RepoItem/Repos.service";
@@ -10,7 +9,7 @@ import {RepoItem} from "../RepoItem/RepoItem";
 
 export class App extends Item {
     private _prevY:number = 0;
-    private _items:PortfolioItem[] = [];
+    private _items:RepoItem[] = [];
     private _repos:RepoItem[] = [];
 
     constructor() {
@@ -26,7 +25,7 @@ export class App extends Item {
 
     private figureTop():number {
         let sum:number = 0;
-        this._items.forEach((item:PortfolioItem) => {
+        this._items.forEach((item:RepoItem) => {
 
         });
 
@@ -37,7 +36,7 @@ export class App extends Item {
         this._items = [].concat(this._repos);
 
         let top:number = 0;
-        this._items.forEach((item:PortfolioItem) => {
+        this._items.forEach((item:RepoItem) => {
             let scale:number = .1 + (Math.random() *.8);
             item.setScale(scale);
 
@@ -69,7 +68,7 @@ export class App extends Item {
             let delta:number = window.scrollY - this._prevY;
             this._prevY = window.scrollY;
 
-            this._items.forEach((item:PortfolioItem) => {
+            this._items.forEach((item:RepoItem) => {
                 item.move(delta);
             })
         });

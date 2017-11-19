@@ -47,6 +47,11 @@ const config = {
     },
     module: {
         rules: [{
+            test: /.*font-mfizz\.(css|eot|svg|ttf|woff)/,
+            use:[
+                loaders.assets
+            ]
+        }, {
             test: /\.ts$/,
             exclude: /node_modules/,
             use: [

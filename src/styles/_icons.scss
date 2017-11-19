@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  font-size: $global-font-size-base;
+  padding: 0 $global-spacing-smaller;
+
+  &::before {
+    font-size: $global-font-size-large;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+}
+
+.icon-angular {
+  @include make-icon($angular-color);
+  position: relative;
+  top: -1px;
+}
+
+.icon-sql {
+  @include make-icon($sql-color);
+}
+
+.icon-sass {
+  @include make-icon($scss-color);
+}
+
+.icon-css3-alt {
+  @include make-icon($css-color);
+}
+
+.icon-reactjs {
+  @include make-icon($react-color);
+}
+
+.icon-html5-alt {
+  @include make-icon($html-color);
+  margin-right: -2px;
+}
+
+.icon-javascript-alt {
+  @include make-icon($js-color);
+  font-size: 19px;
+  position: relative;
+  top: 2px;
+  margin-right: -5px;
+  line-height: 1;
+}
+
+.icon-java-bold {
+  @include make-icon($java-color);
+}
+
+.icon-svg {
+  @include make-icon($svg-color);
+}
+
+.icon-python {
+  @include make-icon($python-color);
+}
+
+.icon-ruby {
+  @include make-icon($ruby-color);
+}
+
+.icon-script {
+  @include make-icon($shell-color);
+}
+
+.icon-apache {
+  @include make-icon($apache-color);
+}
+
+.icon-php-alt {
+  @include make-icon($php-color);
+}
+
+.icon-nginx {
+  @include make-icon($nginx-color);
+}
+
+.icon-go {
+  @include make-icon($go-color);
+}
+
+.icon-docker {
+  @include make-icon($docker-color);
+}
+
+.icon-clojure {
+  @include make-icon($clojure-color);
+}
+
+.icon-csharp {
+  @include make-icon($csharp-color);
+}
+
+.jna-icon-file {
+  @include make-icon($unknown-color);
+}
+
+
+@font-face {
+  font-family: "jna-icons";
+  src:url("assets/fonts/jna-icons.eot");
+  src:url("assets/fonts/jna-icons.eot?#iefix") format("embedded-opentype"),
+  url("assets/fonts/jna-icons.woff") format("woff"),
+  url("assets/fonts/jna-icons.ttf") format("truetype"),
+  url("assets/fonts/jna-icons.svg#jna-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before,
+[data-icon]:after {
+    font-family: "jna-icons" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+[class^="jna-icon-"]:before,
+[class*=" jna-icon-"]:before,
+[class^="jna-icon-"]:after,
+[class*=" jna-icon-"]:after{
+    font-family: "jna-icons" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+.jna-icon-file-alt:before,
+.jna-icon-file-alt-after:after {
+    content: "\6c";
+}
+.jna-icon-flask:before,
+.jna-icon-flask-after:after {
+    content: "\70";
+}
+.jna-icon-code-fork:before,
+.jna-icon-code-fork-after:after {
+    content: "\71";
+}
+.jna-icon-github:before,
+.jna-icon-github-after:after {
+    content: "\72";
+}
+.jna-icon-font:before,
+.jna-icon-font-after:after {
+    content: "\73";
+}
+.jna-icon-stack-overflow:before,
+.jna-icon-stack-overflow-after:after {
+    content: "\76";
+}
+.jna-icon-instagram:before,
+.jna-icon-instagram-after:after {
+    content: "\64";
+}
+.jna-icon-bars:before,
+.jna-icon-bars-after:after {
+    content: "\65";
+}
+.jna-icon-graduation-cap:before,
+.jna-icon-graduation-cap-after:after {
+    content: "\68";
+}
+.jna-icon-coffee:before,
+.jna-icon-coffee-after:after {
+    content: "\69";
+}
+.jna-icon-home:before,
+.jna-icon-home-after:after {
+    content: "\6a";
+}
+.jna-icon-suitcase:before,
+.jna-icon-suitcase-after:after {
+    content: "\62";
+}
+.jna-icon-picture:before,
+.jna-icon-picture-after:after {
+    content: "\61";
+}
+.jna-icon-calendar:before,
+.jna-icon-calendar-after:after {
+    content: "\63";
+}
+.jna-icon-cog:before,
+.jna-icon-cog-after:after {
+    content: "\67";
+}
+.jna-icon-sliders:before,
+.jna-icon-sliders-after:after {
+    content: "\6b";
+}
+.jna-icon-arrow-right:before,
+.jna-icon-arrow-right-after:after {
+    content: "\6f";
+}
+.jna-icon-arrow-left:before,
+.jna-icon-arrow-left-after:after {
+    content: "\74";
+}
+.jna-icon-tags:before,
+.jna-icon-tags-after:after {
+    content: "\6e";
+}
+.jna-icon-tag:before,
+.jna-icon-tag-after:after {
+    content: "\75";
+}
+.jna-icon-type:before,
+.jna-icon-type-after:after {
+    content: "\79";
+}
+.jna-icon-unchecked:before,
+.jna-icon-unchecked-after:after {
+    content: "\66";
+}
+.jna-icon-checked:before,
+.jna-icon-checked-after:after {
+    content: "\6d";
+}
+.jna-icon-sort-amount-desc:before,
+.jna-icon-sort-amount-desc-after:after {
+    content: "\77";
+}
+.jna-icon-sort-amount-asc:before,
+.jna-icon-sort-amount-asc-after:after {
+    content: "\78";
+}
+.jna-icon-text-height:before,
+.jna-icon-text-height-after:after{
+    content: "\7a";
+}
+.jna-icon-blank:before,
+.jna-icon-blank-after:after {
+    content: "";
+    padding-right: 14px;
+}
+

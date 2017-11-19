@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "font-mfizz": "git+https://github.com/fizzed/font-mfizz.git",
     "@types/jasmine": "^2.6.0",
     "@types/pixi.js": "^4.6.0",
     "clean-webpack-plugin": "^0.1.17",
