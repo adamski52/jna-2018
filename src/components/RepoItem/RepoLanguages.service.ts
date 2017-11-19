@@ -4,17 +4,17 @@ import {ILanguage, ILanguageMeta} from "../interfaces/language";
 import {IRepo} from "../interfaces/repo";
 
 export class ReposLanguagesService {
-    private static subject:BehaviorSubject<ILanguage[]> = new BehaviorSubject([{
+    private subject:BehaviorSubject<ILanguage[]> = new BehaviorSubject([{
         name: "none",
         iconClass: "none",
         percentage: 100
     }]);
 
-    public static subscribe(callback:(response:ILanguage[]) => void):Subscription {
+    public subscribe(callback:(response:ILanguage[]) => void):Subscription {
         return this.subject.subscribe(callback);
     }
 
-    public static get(repo:IRepo):void {
+    public get(repo:IRepo):void {
         //HttpService.get(this.subject);
 
         let response:ILanguageMeta = {

@@ -7,9 +7,12 @@ import {RepoLanguage} from "./RepoLanguage";
 export class RepoLanguageBar extends Item {
     private _languages:RepoLanguage[] = [];
     private _items:Item[] = [];
+    private _repoLanguagesService:ReposLanguagesService;
 
     constructor() {
         super("div");
+        this.getContainer().classList.add("repo-language-bar");
+        this._repoLanguagesService = new ReposLanguagesService();
     }
 
     private updateItems():void {
@@ -25,17 +28,17 @@ export class RepoLanguageBar extends Item {
     }
 
     public setRepo(repo:IRepo):void {
-        ReposLanguagesService.subscribe((languages:ILanguage[]) => {
+        this._repoLanguagesService.subscribe((languages:ILanguage[]) => {
             this._languages = [];
             languages.forEach((language:ILanguage) => {
                 let languageItem:RepoLanguage = new RepoLanguage();
                 languageItem.setLanguage(language);
-                this._languages.push();
+                this._languages.push(languageItem);
             });
 
             this.updateItems();
         });
 
-        ReposLanguagesService.get(repo);
+        this._repoLanguagesService.get(repo);
     }
 }

@@ -6,6 +6,7 @@ export class RepoLanguage extends Item {
 
     constructor() {
         super("span");
+        this.getContainer().classList.add("repo-language");
     }
 
     public setLanguage(language:ILanguage):void {
