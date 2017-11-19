@@ -1,3 +1,5 @@
+import "./RepoItem.scss";
+
 import {IRepo} from "../interfaces/repo";
 import {RepoLanguageBar} from "./RepoLanguageBar";
 import {StyledItem} from "../StyledItem/StyledItem";
