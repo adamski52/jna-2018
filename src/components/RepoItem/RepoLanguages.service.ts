@@ -21,7 +21,7 @@ export class ReposLanguagesService {
         language = language.replace(/\s/gi, "");
         language = language.toUpperCase();
 
-        return RepoLanguageMap[language] || RepoLanguageMap["OTHER"];
+        return "devicon-" + (RepoLanguageMap[language] || RepoLanguageMap["OTHER"]);
     }
 
     public get(repo:IRepo):void {
@@ -34,14 +34,13 @@ export class ReposLanguagesService {
             "JavaScript": 4117
         };
 
-
         let languages:ILanguage[] = [],
             total:number = 0;
 
         Object.keys(response).forEach((key:string) => {
             languages.push({
                 name: key,
-                iconClass: key, // TODO
+                iconClass: this.getIconClass(key),
                 percentage: response[key]
             });
 
@@ -49,7 +48,7 @@ export class ReposLanguagesService {
         });
 
         languages.forEach((language:ILanguage) => {
-            language.percentage = Math.ceil((language.percentage / total)*100);
+            language.percentage = Math.ceil((language.percentage / total) * 100);
         });
 
         this.subject.next(languages)

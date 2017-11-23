@@ -59,21 +59,21 @@ $language-icon-size: 25px;
     max-width: 100%;
   }
 
-  &:after {
-    float: left;
-    width: 5px;
-    content: "";
-  }
-  &:before {
-    display: block;
-    width: $language-icon-size;
-    height: $language-icon-size;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "X";
-    text-align: center;
-    margin-right: 5px;
-    line-height: $language-icon-size;
-  }
+  //&:after {
+  //  float: left;
+  //  width: 5px;
+  //  content: "";
+  //}
+  //&:before {
+  //  display: block;
+  //  width: $language-icon-size;
+  //  height: $language-icon-size;
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  content: "X";
+  //  text-align: center;
+  //  margin-right: 5px;
+  //  line-height: $language-icon-size;
+  //}
 }

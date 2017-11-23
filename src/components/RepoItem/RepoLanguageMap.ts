@@ -3,7 +3,7 @@ export interface IRepoLanguageMapping {
 }
 
 const repoLanguageMap:IRepoLanguageMapping = {
-    OTHER: "devicon-plain",
+    OTHER: "plain",
     NPM: "npm-original-wordmark",
     IONIC: "ionic-original",
     EMBER: "ember-original-wordmark",
