@@ -1,8 +1,13 @@
 @import "../node_modules/devicon-2.2/devicon.css";
+@import "../node_modules/devicon-2.2/devicon-colors.css";
+@import url('https://fonts.googleapis.com/css?family=Happy+Monkey');
+
 @import "styles/variables";
 
 body {
     padding: 20px;
+    font-family: "Happy Monkey";
+    font-size: 14px;
     margin: 0;
     background: url(assets/concrete_seamless.png) #fff;
 }

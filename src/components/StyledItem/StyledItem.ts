@@ -11,7 +11,7 @@ export class StyledItem extends InteractiveItem {
     private _top:number;
     private _left:number;
     private _blur:number;
-    private _baseBlur:number = 30;
+    private _baseBlur:number = 15;
     private _baseWidth:number = 300;
     private _baseHeight:number = 300;
     private _origTop:number;
@@ -92,7 +92,7 @@ export class StyledItem extends InteractiveItem {
     }
 
     public move(deltaTop:number, doRender:boolean = true):void {
-        this._top = this._top - deltaTop * this._scale;
+        this._top = this._top - deltaTop * Math.pow(this._scale, 1 / this._scale);
         if(doRender) {
             this.render();
         }

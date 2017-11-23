@@ -23,15 +23,6 @@ export class App extends Item {
         autoPlay(true);
     }
 
-    private figureTop():number {
-        let sum:number = 0;
-        this._items.forEach((item:RepoItem) => {
-
-        });
-
-        return sum;
-    }
-
     private updateItems():void {
         this._items = [].concat(this._repos);
 
@@ -70,7 +61,7 @@ export class App extends Item {
 
             this._items.forEach((item:RepoItem) => {
                 item.move(delta);
-            })
+            });
         });
     }
 }

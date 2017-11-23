@@ -32,5 +32,7 @@ export class RepoItem extends StyledItem {
     public setContent(repo:IRepo):void {
         this.setTitle(repo.name);
         this._languages.setRepo(repo);
+        this.getContainer().style.backgroundImage = "url(https://github.com/adamski52/" + repo.name + "/blob/master/thumbnail.jpg?raw=true)";
+
     }
 }

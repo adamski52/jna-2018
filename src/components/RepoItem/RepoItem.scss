@@ -1,6 +1,8 @@
 .repo-item {
   position: absolute;
-  background: url(https://github.com/adamski52/travis-ftpr/blob/master/thumbnail.jpg?raw=true) no-repeat center center #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
   background-size: cover;
   box-shadow: 0 0 50px rgba(0, 0, 0, .3);
   overflow: hidden;
@@ -35,11 +37,10 @@ $title-size: 25px;
   text-align: right;
 }
 
-
-
 $language-icon-size: 25px;
 .repo-language {
   opacity: 0;
+  font-size: 1.2em;
   display: block;
   transition: all linear .3s;
   box-sizing: border-box;
@@ -47,33 +48,43 @@ $language-icon-size: 25px;
   clear: left;
   max-width: $language-icon-size;
   height: $language-icon-size;
-  line-height: $language-icon-size;
+  line-height: 1.2em;
   padding-left: $language-icon-size;
   position: relative;
-  color: #fff;
   white-space: nowrap;
   overflow: hidden;
   background: #000;
 
-  &:hover {
-    max-width: 100%;
+  span {
+    color: #fff;
+    font-size: .8em;
+    font-family: "Happy Monkey";
   }
 
-  //&:after {
-  //  float: left;
-  //  width: 5px;
-  //  content: "";
-  //}
-  //&:before {
-  //  display: block;
-  //  width: $language-icon-size;
-  //  height: $language-icon-size;
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  content: "X";
-  //  text-align: center;
-  //  margin-right: 5px;
-  //  line-height: $language-icon-size;
-  //}
+  &:hover {
+    max-width: 100%;
+
+    &:before {
+      text-shadow: 0 0 20px rgba(255, 255, 255, .8);
+    }
+  }
+
+  &:after {
+    float: left;
+    width: 5px;
+    content: "";
+  }
+
+  &:before {
+    transition: all .3s linear;
+    display: block;
+    width: $language-icon-size;
+    height: $language-icon-size;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-right: 5px;
+    line-height: $language-icon-size;
+  }
 }

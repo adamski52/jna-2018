@@ -16,6 +16,11 @@ export class InteractiveItem extends Item {
     constructor(type:string) {
         super(type);
 
+        document.addEventListener("mouseup", (e:MouseEvent) => {
+            e.preventDefault();
+            document.removeEventListener("mousemove", this._dragHandler);
+        });
+
         this.getContainer().addEventListener("mousedown", (e:MouseEvent) => {
             e.preventDefault();
 

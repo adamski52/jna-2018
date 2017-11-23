@@ -3,6 +3,7 @@ import {Subscription} from "rxjs/Subscription";
 import {ILanguage, ILanguageMeta} from "../interfaces/language";
 import {IRepo} from "../interfaces/repo";
 import {RepoLanguageMap} from "./RepoLanguageMap";
+import {HttpService} from "../HttpService";
 
 export class ReposLanguagesService {
     private subject:BehaviorSubject<ILanguage[]> = new BehaviorSubject([{
@@ -25,32 +26,25 @@ export class ReposLanguagesService {
     }
 
     public get(repo:IRepo):void {
-        //HttpService.get(this.subject);
+        HttpService.get("/api/repos/adamski52/" + repo.name + "/languages", (response: ILanguageMeta) => {
+            let languages: ILanguage[] = [],
+                total: number = 0;
 
-        let response:ILanguageMeta = {
-            "TypeScript": 135022,
-            "CSS": 20277,
-            "HTML": 7500,
-            "JavaScript": 4117
-        };
+            Object.keys(response).forEach((key: string) => {
+                languages.push({
+                    name: key,
+                    iconClass: this.getIconClass(key),
+                    percentage: response[key]
+                });
 
-        let languages:ILanguage[] = [],
-            total:number = 0;
-
-        Object.keys(response).forEach((key:string) => {
-            languages.push({
-                name: key,
-                iconClass: this.getIconClass(key),
-                percentage: response[key]
+                total += response[key];
             });
 
-            total += response[key];
-        });
+            languages.forEach((language: ILanguage) => {
+                language.percentage = Math.ceil((language.percentage / total) * 100);
+            });
 
-        languages.forEach((language:ILanguage) => {
-            language.percentage = Math.ceil((language.percentage / total) * 100);
+            this.subject.next(languages);
         });
-
-        this.subject.next(languages)
     }
 }
