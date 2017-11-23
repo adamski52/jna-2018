@@ -19,17 +19,11 @@ export class StyledItem extends InteractiveItem {
     private _mouseOriginX:number;
     private _mouseOriginY:number;
     private _tween:Tween;
-    private _dragHandler:EventListener;
 
     constructor(type:string = "div") {
         super(type);
         this.getContainer().classList.add("styled-item");
-
-        this._dragHandler = (e:MouseEvent) => {
-            this.onDrag(e);
-        };
     }
-
 
     private tweenScale(scale:number):void {
         if(this._tween && this._tween.isPlaying()) {
@@ -49,34 +43,21 @@ export class StyledItem extends InteractiveItem {
     }
 
     protected onMouseDown(e:MouseEvent):void {
-        console.log("down");
-        e.preventDefault();
         this._mouseOriginX = e.screenX;
         this._mouseOriginY = e.screenY;
         this._origLeft = this._left;
         this._origTop = this._top;
-
-        document.addEventListener("mousemove", this._dragHandler);
-    }
-
-    protected onMouseUp(e:MouseEvent):void {
-        console.log("up");
-        e.preventDefault();
-        document.removeEventListener("mousemove", this._dragHandler);
     }
 
     protected onMouseEnter(e:MouseEvent):void {
-        console.log("enter");
         this.tweenScale(1);
     }
 
     protected onMouseLeave(e:MouseEvent):void {
-        console.log("leave");
         this.tweenScale(this._fixedScale);
     }
 
     protected onDrag(e:MouseEvent):void {
-        console.log("drag");
         this._left = this._origLeft + (e.screenX - this._mouseOriginX);
         this._top = this._origTop + (e.screenY - this._mouseOriginY);
         this.render();
