@@ -1,11 +1,11 @@
 import "./StyledItem.scss";
 
 import {StyleUtils} from "../StyleUtils";
-import {Item} from "../Item/Item";
 import {IVisualBound} from "../Interfaces";
 import {Tween, Easing} from "es6-tween";
+import {InteractiveItem} from "../RepoItem/InteractiveItem";
 
-export class StyledItem extends Item {
+export class StyledItem extends InteractiveItem {
     private _scale:number;
     private _fixedScale:number;
     private _top:number;
@@ -19,28 +19,17 @@ export class StyledItem extends Item {
     private _mouseOriginX:number;
     private _mouseOriginY:number;
     private _tween:Tween;
-
-    private _dragHandle:EventListener = (e:MouseEvent) => {
-        e.preventDefault();
-        this.onDrag(e);
-    };
-
-    private _releaseOutsideHandler:EventListener = (e:MouseEvent) => {
-        e.preventDefault();
-        document.removeEventListener("mousemove", this._dragHandle);
-    };
+    private _dragHandler:EventListener;
 
     constructor(type:string = "div") {
         super(type);
         this.getContainer().classList.add("styled-item");
-        this.setupEvents();
+
+        this._dragHandler = (e:MouseEvent) => {
+            this.onDrag(e);
+        };
     }
 
-    private onDrag(e:MouseEvent):void {
-        this._left = this._origLeft + (e.screenX - this._mouseOriginX);
-        this._top = this._origTop + (e.screenY - this._mouseOriginY);
-        this.render();
-    }
 
     private tweenScale(scale:number):void {
         if(this._tween && this._tween.isPlaying()) {
@@ -59,27 +48,38 @@ export class StyledItem extends Item {
             .start();
     }
 
-    private setupEvents():void {
-        this.getContainer().addEventListener("mousedown", (e:MouseEvent) => {
-            e.preventDefault();
-            this._releaseOutsideHandler(e);
-            this._mouseOriginX = e.screenX;
-            this._mouseOriginY = e.screenY;
-            this._origLeft = this._left;
-            this._origTop = this._top;
+    protected onMouseDown(e:MouseEvent):void {
+        console.log("down");
+        e.preventDefault();
+        this._mouseOriginX = e.screenX;
+        this._mouseOriginY = e.screenY;
+        this._origLeft = this._left;
+        this._origTop = this._top;
 
-            document.addEventListener("mousemove", this._dragHandle);
-        });
+        document.addEventListener("mousemove", this._dragHandler);
+    }
 
-        this.getContainer().addEventListener("mouseup", this._releaseOutsideHandler);
+    protected onMouseUp(e:MouseEvent):void {
+        console.log("up");
+        e.preventDefault();
+        document.removeEventListener("mousemove", this._dragHandler);
+    }
 
-        this.getContainer().addEventListener("mouseenter", (e:MouseEvent) => {
-            this.tweenScale(1);
-        });
+    protected onMouseEnter(e:MouseEvent):void {
+        console.log("enter");
+        this.tweenScale(1);
+    }
 
-        this.getContainer().addEventListener("mouseleave", (e:MouseEvent) => {
-            this.tweenScale(this._fixedScale);
-        });
+    protected onMouseLeave(e:MouseEvent):void {
+        console.log("leave");
+        this.tweenScale(this._fixedScale);
+    }
+
+    protected onDrag(e:MouseEvent):void {
+        console.log("drag");
+        this._left = this._origLeft + (e.screenX - this._mouseOriginX);
+        this._top = this._origTop + (e.screenY - this._mouseOriginY);
+        this.render();
     }
 
     public render():void {

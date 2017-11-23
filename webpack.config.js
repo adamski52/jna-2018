@@ -47,7 +47,7 @@ const config = {
     },
     module: {
         rules: [{
-            test: /.*font-mfizz\.(css|eot|svg|ttf|woff)/,
+            test: /.*devicon\.(css|eot|svg|ttf|woff)/,
             use:[
                 loaders.assets
             ]

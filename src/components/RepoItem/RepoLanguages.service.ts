@@ -2,6 +2,7 @@ import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {Subscription} from "rxjs/Subscription";
 import {ILanguage, ILanguageMeta} from "../interfaces/language";
 import {IRepo} from "../interfaces/repo";
+import {RepoLanguageMap} from "./RepoLanguageMap";
 
 export class ReposLanguagesService {
     private subject:BehaviorSubject<ILanguage[]> = new BehaviorSubject([{
@@ -12,6 +13,15 @@ export class ReposLanguagesService {
 
     public subscribe(callback:(response:ILanguage[]) => void):Subscription {
         return this.subject.subscribe(callback);
+    }
+
+    public getIconClass(language:string):string {
+        language = language.replace(/\+/gi, "plus");
+        language = language.replace(/#/gi, "sharp");
+        language = language.replace(/\s/gi, "");
+        language = language.toUpperCase();
+
+        return RepoLanguageMap[language] || RepoLanguageMap["OTHER"];
     }
 
     public get(repo:IRepo):void {
