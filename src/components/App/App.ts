@@ -44,8 +44,7 @@ export class App extends Item {
         ReposService.subscribe((repos:IRepo[]) => {
             this._repos = [];
             repos.forEach((r:IRepo) => {
-                let repo:RepoItem = new RepoItem();
-                repo.setContent(r);
+                let repo:RepoItem = new RepoItem(r);
                 this._repos.push(repo);
             });
             this.updateItems();

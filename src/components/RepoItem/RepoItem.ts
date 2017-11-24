@@ -9,7 +9,7 @@ export class RepoItem extends StyledItem {
     private _languages:RepoLanguageBar;
     private _title:Item;
 
-    constructor() {
+    constructor(repo:IRepo) {
         super();
         for (let obj in this.getContainer().classList) {
             this.getContainer().classList.remove(obj);
@@ -23,16 +23,12 @@ export class RepoItem extends StyledItem {
 
         this._languages = new RepoLanguageBar();
         this.getContainer().appendChild(this._languages.getContainer());
-    }
 
-    private setTitle(title:string):void {
-        this._title.getContainer().innerText = title;
-    }
-
-    public setContent(repo:IRepo):void {
-        this.setTitle(repo.name);
-        this._languages.setRepo(repo);
+        this._title.getContainer().innerText = repo.name;
         this.getContainer().style.backgroundImage = "url(https://github.com/adamski52/" + repo.name + "/blob/master/thumbnail.jpg?raw=true)";
 
+        this.getContainer().addEventListener("mouseenter", (e:MouseEvent) => {
+            this._languages.load(repo);
+        });
     }
 }
