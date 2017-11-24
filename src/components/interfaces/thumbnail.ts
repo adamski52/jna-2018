@@ -16,8 +16,3 @@ export interface IThumbnail {
         html: string;
     }
 }
-
-export interface IThumbnailResponse {
-    found?: boolean;
-    content?: IThumbnail;
-}
