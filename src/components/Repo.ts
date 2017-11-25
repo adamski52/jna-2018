@@ -1,28 +1,68 @@
-import "./StyledItem.scss";
+import "./Repo.scss";
 
-import {StyleUtils} from "../StyleUtils";
-import {IVisualBound} from "../Interfaces";
+import {GenericItem} from "./GenericItem";
+import {Background} from "./Background";
+import {LanguagesContainer} from "./LanguagesContainer";
+import {CommitsContainer} from "./CommitsContainer";
+import {Title} from "./Title";
 import {Tween, Easing} from "es6-tween";
-import {InteractiveItem} from "../RepoItem/InteractiveItem";
+import {IRepo} from "../interfaces/Repo.interface";
+import {StyleUtils} from "../services/StyleUtils.service";
+import {IVisualBound} from "../interfaces/VisualBound.interface";
 
-export class StyledItem extends InteractiveItem {
+export class Repo extends GenericItem {
+    private _background:Background;
+    private _languages:LanguagesContainer;
+    private _commits:CommitsContainer;
+    private _title:Title;
+
     private _scale:number;
     private _fixedScale:number;
     private _top:number;
     private _left:number;
     private _blur:number;
     private _baseBlur:number = 15;
-    private _baseWidth:number = 300;
-    private _baseHeight:number = 300;
+    // private _baseWidth:number = 300;
+    // private _baseHeight:number = 300;
     private _origTop:number;
     private _origLeft:number;
     private _mouseOriginX:number;
     private _mouseOriginY:number;
     private _tween:Tween;
 
-    constructor(type:string = "div") {
-        super(type);
-        this.getContainer().classList.add("styled-item");
+    constructor(repo:IRepo) {
+        super();
+
+        this.createEventListeners();
+        this.createBackground(repo);
+        this.createTitle(repo);
+        this.createLanguageBar(repo);
+        this.createCommitsContainer(repo);
+
+        this.getContainer().addEventListener("mouseenter", () => {
+            this._languages.load();
+            this._commits.load();
+        });
+    }
+
+    private createBackground(repo:IRepo):void {
+        this._background = new Background(repo);
+        this.addChild(this._background);
+    }
+
+    private createTitle(repo:IRepo):void {
+        this._title = new Title(repo);
+        this.addChild(this._title);
+    }
+
+    private createLanguageBar(repo:IRepo):void {
+        this._languages = new LanguagesContainer(repo);
+        this.addChild(this._languages);
+    }
+
+    private createCommitsContainer(repo:IRepo):void {
+        this._commits = new CommitsContainer(repo);
+        this.addChild(this._commits);
     }
 
     private tweenScale(scale:number):void {
@@ -64,27 +104,27 @@ export class StyledItem extends InteractiveItem {
     }
 
     public render():void {
-        StyleUtils.width(this.getContainer(), this._baseWidth);
-        StyleUtils.height(this.getContainer(), this._baseHeight);
-        StyleUtils.top(this.getContainer(), this._top);
-        StyleUtils.left(this.getContainer(), this._left);
-        StyleUtils.blur(this.getContainer(), this._blur);
-        StyleUtils.scale(this.getContainer(), this._scale);
+        // StyleUtils.width(this, this._baseWidth);
+        // StyleUtils.height(this, this._baseHeight);
+        StyleUtils.top(this, this._top);
+        StyleUtils.left(this, this._left);
+        StyleUtils.blur(this, this._blur);
+        StyleUtils.scale(this, this._scale);
     }
 
     public getVisualBounds():IVisualBound {
         return {
             top: this._top,
             left: this._left,
-            right: this._left + this._baseWidth,
-            bottom: this._top + this._baseHeight,
-            height: this._baseHeight,
-            width: this._baseWidth,
+            // right: this._left + this._baseWidth,
+            // bottom: this._top + this._baseHeight,
+            height: 300,
+            width: 300,
             scale: this._scale
         };
     }
 
-    public setBlur(doRender:boolean = true):void {
+    protected setBlur(doRender:boolean = true):void {
         this._blur = this._baseBlur * (Math.abs(this._scale - 1));
         if(doRender) {
             this.render();

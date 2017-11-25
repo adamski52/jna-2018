@@ -1,8 +1,7 @@
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {Subscription} from "rxjs/Subscription";
-import {IRepo} from "../interfaces/repo";
-import {HttpService} from "../HttpService";
-import {IUser} from "../interfaces/user";
+import {IRepo} from "../interfaces/Repo.interface";
+import {HttpService} from "./Http.service";
 
 export class ReposService {
     private static subject:BehaviorSubject<IRepo[]> = new BehaviorSubject([]);

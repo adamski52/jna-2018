@@ -1,11 +1,12 @@
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {Subscription} from "rxjs/Subscription";
-import {ILanguage, ILanguageMeta} from "../interfaces/language";
-import {IRepo} from "../interfaces/repo";
-import {RepoLanguageMap} from "./RepoLanguageMap";
-import {HttpService} from "../HttpService";
+import {ILanguage} from "../interfaces/Language.interface";
+import {LanguageMap} from "./LanguageMap.service";
+import {ILanguageMeta} from "../interfaces/LanguageMeta.interface";
+import {HttpService} from "./Http.service";
+import {IRepo} from "../interfaces/Repo.interface";
 
-export class ReposLanguagesService {
+export class LanguagesService {
     private subject:BehaviorSubject<ILanguage[]> = new BehaviorSubject([{
         name: "none",
         iconClass: "none",
@@ -22,7 +23,7 @@ export class ReposLanguagesService {
         language = language.replace(/\s/gi, "");
         language = language.toUpperCase();
 
-        return "devicon-" + (RepoLanguageMap[language] || RepoLanguageMap["OTHER"]);
+        return "devicon-" + (LanguageMap[language] || LanguageMap["OTHER"]);
     }
 
     public get(repo:IRepo):void {

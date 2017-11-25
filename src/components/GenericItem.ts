@@ -1,6 +1,6 @@
-import {Item} from "../Item/Item";
-
-export class InteractiveItem extends Item {
+export class GenericItem {
+    private _container:HTMLElement;
+    protected _children:GenericItem[] = [];
     protected onMouseUp(e:MouseEvent):void {}
     protected onMouseDown(e:MouseEvent):void {}
     protected onMouseEnter(e:MouseEvent):void {}
@@ -13,9 +13,12 @@ export class InteractiveItem extends Item {
         this.onDrag(e);
     };
 
-    constructor(type:string) {
-        super(type);
+    constructor(type:string = "div") {
+        this._container = document.createElement(type);
+        this.addClass(this.constructor.name);
+    }
 
+    protected createEventListeners():void {
         document.addEventListener("mouseup", (e:MouseEvent) => {
             e.preventDefault();
             document.removeEventListener("mousemove", this._dragHandler);
@@ -47,5 +50,34 @@ export class InteractiveItem extends Item {
 
             this.onMouseLeave(e);
         });
+    }
+
+    protected setStyle(property:string, value:string|number) {
+        this.getContainer().style[property] = value;
+    }
+
+    protected setText(text:string) {
+        this.getContainer().innerText = text;
+    }
+
+    protected addChild(item:GenericItem):void {
+        this._children.push(item);
+        this.getContainer().appendChild(item.getContainer());
+    }
+
+    public getContainer():HTMLElement {
+        return this._container;
+    }
+
+    public removeAllChildren():void {
+        this._children.forEach((item:GenericItem) => {
+            this.getContainer().removeChild(item.getContainer());
+        });
+
+        this._children = [];
+    }
+
+    public addClass(className:string):void {
+        this.getContainer().classList.add(className);
     }
 }

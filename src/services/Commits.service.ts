@@ -1,10 +1,10 @@
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {Subscription} from "rxjs/Subscription";
-import {IRepo} from "../interfaces/repo";
-import {HttpService} from "../HttpService";
-import {ICommit} from "../interfaces/commit";
+import {HttpService} from "./Http.service";
+import {ICommit} from "../interfaces/Commit.interface";
+import {IRepo} from "../interfaces/Repo.interface";
 
-export class ReposEventsService {
+export class CommitsService {
     private subject:BehaviorSubject<ICommit[]> = new BehaviorSubject([]);
 
     public subscribe(callback:(response:ICommit[]) => void):Subscription {

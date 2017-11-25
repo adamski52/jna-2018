@@ -1,0 +1,46 @@
+@import "../styles/variables";
+
+.Language {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: $font-size-large;
+  transition: $transition;
+  float: left;
+  clear: left;
+  max-width: $language-icon-size;
+  height: $language-icon-size;
+  line-height: $font-size-large;
+  padding-left: $language-icon-size;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  background: $color-dark;
+
+  &:hover {
+    max-width: 100%;
+
+    &:before {
+      text-shadow: 0 0 $size-large rgba($color-light, $opacity-heavy);
+    }
+  }
+
+  &:after {
+    float: left;
+    width: 5px;
+    content: "";
+  }
+
+  &:before {
+    transition: all .3s linear;
+    display: block;
+    width: $language-icon-size;
+    height: $language-icon-size;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-right: 5px;
+    line-height: $language-icon-size;
+  }
+}

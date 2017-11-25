@@ -1,0 +1,9 @@
+@import "../styles/variables";
+
+.Commit {
+  box-sizing: border-box;
+  margin: 0;
+  padding: $size-medium;
+  background: $color-medium;
+  border-top: $size-small solid $color-dark;
+}

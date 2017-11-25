@@ -1,0 +1,29 @@
+@import "../styles/variables";
+
+.Repo {
+  position: absolute;
+  box-shadow: 0 0 $size-large rgba($color-dark, $opacity-light);
+
+  .Title,
+  .LanguagesContainer {
+    transition: $transition;
+    opacity: 0;
+  }
+
+  .CommitsContainer {
+    transition: $transition;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &:hover {
+    .Title,
+    .LanguagesContainer {
+      opacity: 1;
+    }
+
+    .CommitsContainer {
+      max-height: 1000px;
+    }
+  }
+}

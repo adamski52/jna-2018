@@ -1,0 +1,10 @@
+@import "../styles/variables";
+
+.CommitsContainer {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: $item-size;
+  list-style: none;
+  color: $color-light;
+}

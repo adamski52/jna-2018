@@ -1,0 +1,16 @@
+@import "../styles/variables";
+
+.Title {
+  box-sizing: border-box;
+  transition: $transition;;
+  position: absolute;
+  padding-right: $size-medium;
+  margin: 0;
+  top: $item-size;
+  height: $title-size;
+  line-height: $title-size;
+  width: $item-size;
+  background: $color-dark;
+  color: $color-light;
+  text-align: right;
+}

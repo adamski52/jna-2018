@@ -1,4 +1,4 @@
-import {IPlan} from "./plan";
+import {IPlan} from "./Plan.interface";
 
 export interface IUser {
     avatar_url: string;

@@ -1,5 +1,5 @@
-import {IUser} from "./user";
-import {IPermissions} from "./permissions";
+import {IUser} from "./User.interface";
+import {IPermissions} from "./Permissions.interface";
 
 export interface IRepo {
     archive_url: string;

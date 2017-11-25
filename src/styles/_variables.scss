@@ -5,3 +5,19 @@
 @function lighter($color, $pct) {
   @return mix(#fff, $color, $pct);
 }
+
+$item-size: 300px;
+$language-icon-size: 25px;
+$title-size: 25px;
+$transition: all linear .3s;
+$color-dark: #000;
+$color-medium: #444;
+$color-light: #fff;
+$font-size-large: 1.3em;
+$font-size-medium: .8em;
+$size-large: 20px;
+$size-medium: 5px;
+$size-small: 1px;
+$opacity-heavy: .8;
+$opacity-light: .3;
+$font-main: "Happy Monkey";
