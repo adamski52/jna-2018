@@ -21,6 +21,7 @@ export class LanguagesContainer extends GenericItem {
     private setupSubscriptions():void {
         this._languagesService.subscribe((languages:ILanguage[]) => {
             this.removeAllChildren();
+            this.hideSpinner();
 
             languages.forEach((language:ILanguage) => {
                 let languageItem:Language = new Language(language);
@@ -29,7 +30,7 @@ export class LanguagesContainer extends GenericItem {
         });
     }
 
-    public load():void {
+    protected onLoadStart():void {
         this._languagesService.get(this._repo);
     }
 }

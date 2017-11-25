@@ -27,12 +27,12 @@
 
   &:after {
     float: left;
-    width: 5px;
+    width: $size-medium;
     content: "";
   }
 
   &:before {
-    transition: all .3s linear;
+    transition: $transition;
     display: block;
     width: $language-icon-size;
     height: $language-icon-size;
@@ -40,7 +40,7 @@
     top: 0;
     left: 0;
     text-align: center;
-    margin-right: 5px;
+    margin-right: $size-medium;
     line-height: $language-icon-size;
   }
 }

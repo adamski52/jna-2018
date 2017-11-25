@@ -7,11 +7,7 @@ import {HttpService} from "./Http.service";
 import {IRepo} from "../interfaces/Repo.interface";
 
 export class LanguagesService {
-    private subject:BehaviorSubject<ILanguage[]> = new BehaviorSubject([{
-        name: "none",
-        iconClass: "none",
-        percentage: 100
-    }]);
+    private subject:BehaviorSubject<ILanguage[]> = new BehaviorSubject([]);
 
     public subscribe(callback:(response:ILanguage[]) => void):Subscription {
         return this.subject.subscribe(callback);

@@ -21,6 +21,7 @@ export class CommitsContainer extends GenericItem {
     private setupSubscriptions():void {
         this._commitsService.subscribe((commits:ICommit[]) => {
             this.removeAllChildren();
+            this.hideSpinner();
 
             commits.forEach((commit:ICommit) => {
                 let item:Commit = new Commit(commit);
@@ -30,7 +31,7 @@ export class CommitsContainer extends GenericItem {
         });
     }
 
-    public load():void {
+    protected onLoadStart():void {
         this._commitsService.get(this._repo);
     }
 }

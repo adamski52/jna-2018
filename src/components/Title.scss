@@ -6,7 +6,7 @@
   position: absolute;
   padding-right: $size-medium;
   margin: 0;
-  top: $item-size;
+  top: $item-size - $title-size;
   height: $title-size;
   line-height: $title-size;
   width: $item-size;

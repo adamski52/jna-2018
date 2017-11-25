@@ -69,7 +69,7 @@ const config = {
                 ]
             })
         }, {
-            test: /\.(png|jpg)$/,
+            test: /\.(png|jpg|gif)$/,
             use: [
                 loaders.assets
             ]

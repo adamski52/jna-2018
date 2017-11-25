@@ -21,9 +21,7 @@ export class Repo extends GenericItem {
     private _top:number;
     private _left:number;
     private _blur:number;
-    private _baseBlur:number = 15;
-    // private _baseWidth:number = 300;
-    // private _baseHeight:number = 300;
+    private _baseBlur:number = 15;  // TODO:  Get from rendered style so scss vars carry through?
     private _origTop:number;
     private _origLeft:number;
     private _mouseOriginX:number;
@@ -38,11 +36,6 @@ export class Repo extends GenericItem {
         this.createTitle(repo);
         this.createLanguageBar(repo);
         this.createCommitsContainer(repo);
-
-        this.getContainer().addEventListener("mouseenter", () => {
-            this._languages.load();
-            this._commits.load();
-        });
     }
 
     private createBackground(repo:IRepo):void {
@@ -74,7 +67,7 @@ export class Repo extends GenericItem {
             .to({
                 _scale: scale
             })
-            .duration(800)
+            .duration(800)  // TODO:  Get from rendered style so scss vars carry through?
             .easing(Easing.Elastic.Out)
             .on("update", () => {
                 this.setScale(this._scale);
@@ -91,6 +84,8 @@ export class Repo extends GenericItem {
 
     protected onMouseEnter(e:MouseEvent):void {
         this.tweenScale(1);
+        this._languages.load();
+        this._commits.load();
     }
 
     protected onMouseLeave(e:MouseEvent):void {
@@ -104,8 +99,6 @@ export class Repo extends GenericItem {
     }
 
     public render():void {
-        // StyleUtils.width(this, this._baseWidth);
-        // StyleUtils.height(this, this._baseHeight);
         StyleUtils.top(this, this._top);
         StyleUtils.left(this, this._left);
         StyleUtils.blur(this, this._blur);
@@ -116,9 +109,7 @@ export class Repo extends GenericItem {
         return {
             top: this._top,
             left: this._left,
-            // right: this._left + this._baseWidth,
-            // bottom: this._top + this._baseHeight,
-            height: 300,
+            height: 300, // TODO:  Get from rendered style so scss vars carry through?
             width: 300,
             scale: this._scale
         };
