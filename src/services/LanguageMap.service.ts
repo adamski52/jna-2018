@@ -65,5 +65,14 @@ export class LanguageMap {
     public static SCSS:string = "sass-original";
     public static SASS:string = "sass-original";
     public static TRAVIS:string = "travis-plain";
-    public static TYPESCRIPT:string = "typescript-plain"
+    public static TYPESCRIPT:string = "typescript-plain";
+
+    public static getIconClass(key:string):string {
+        key = key.replace(/\+/gi, "plus");
+        key = key.replace(/#/gi, "sharp");
+        key = key.replace(/\s/gi, "");
+        key = key.toUpperCase();
+
+        return "devicon-" + (LanguageMap[key] || LanguageMap["OTHER"]);
+    }
 };

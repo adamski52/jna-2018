@@ -3,7 +3,17 @@
 .Commit {
   box-sizing: border-box;
   margin: 0;
-  padding: $size-medium;
+  padding: $size-medium $size-medium $size-medium $language-icon-size;
   background: $color-medium;
   border-top: $size-small solid $color-dark;
+  font-family: $font-main;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    left: $size-medium;
+    top: $size-medium;
+    font-family: $font-icon;
+    margin-right: $size-medium;
+  }
 }

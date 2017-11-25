@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Happy+Monkey');
+
 @function darker($color, $pct) {
   @return mix(#000, $color, $pct);
 }
@@ -7,17 +9,26 @@
 }
 
 $item-size: 300px;
+$commits-container-max-size: $item-size * 3;
 $language-icon-size: 25px;
 $title-size: 25px;
+
 $transition: all linear .3s;
+
 $color-dark: #000;
 $color-medium: #444;
 $color-light: #fff;
+
+$font-size-base: 14px;
 $font-size-large: 1.3em;
 $font-size-medium: .8em;
+
 $size-large: 20px;
 $size-medium: 5px;
 $size-small: 1px;
+
 $opacity-heavy: .8;
-$opacity-light: .3;
+$opacity-light: .5;
+
 $font-main: "Happy Monkey";
+$font-icon: "devicon";

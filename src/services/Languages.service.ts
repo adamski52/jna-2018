@@ -13,15 +13,6 @@ export class LanguagesService {
         return this.subject.subscribe(callback);
     }
 
-    public getIconClass(language:string):string {
-        language = language.replace(/\+/gi, "plus");
-        language = language.replace(/#/gi, "sharp");
-        language = language.replace(/\s/gi, "");
-        language = language.toUpperCase();
-
-        return "devicon-" + (LanguageMap[language] || LanguageMap["OTHER"]);
-    }
-
     public get(repo:IRepo):void {
         HttpService.get("/api/repos/adamski52/" + repo.name + "/languages", (response: ILanguageMeta) => {
             let languages: ILanguage[] = [],
@@ -30,7 +21,7 @@ export class LanguagesService {
             Object.keys(response).forEach((key: string) => {
                 languages.push({
                     name: key,
-                    iconClass: this.getIconClass(key),
+                    iconClass: LanguageMap.getIconClass(key),
                     percentage: response[key]
                 });
 
