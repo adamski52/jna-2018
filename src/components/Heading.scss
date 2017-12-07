@@ -1,7 +1,8 @@
 @import "../styles/variables";
 
 .Heading {
-  font-size: $font-size-base;
+  font-size: $font-size-medium;
+  font-family: $font-accent;
   margin: 0;
   padding: $size-small $size-large;
 }
