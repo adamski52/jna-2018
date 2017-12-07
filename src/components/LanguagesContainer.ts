@@ -1,12 +1,12 @@
 import "./LanguagesContainer.scss";
 
-import {GenericItem} from "./GenericItem";
 import {LanguagesService} from "../services/Languages.service";
 import {IRepo} from "../interfaces/Repo.interface";
 import {ILanguage} from "../interfaces/Language.interface";
 import {Language} from "./Language";
+import {AsyncItem} from "./AsyncItem";
 
-export class LanguagesContainer extends GenericItem {
+export class LanguagesContainer extends AsyncItem {
     private _languagesService:LanguagesService = new LanguagesService();
     private _repo:IRepo;
 

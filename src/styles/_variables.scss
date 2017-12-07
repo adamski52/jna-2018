@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Happy+Monkey');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
 @function darker($color, $pct) {
   @return mix(#000, $color, $pct);
@@ -31,4 +32,5 @@ $opacity-heavy: .8;
 $opacity-light: .5;
 
 $font-main: "Happy Monkey";
+$font-accent: "Press Start 2P";
 $font-icon: "devicon";

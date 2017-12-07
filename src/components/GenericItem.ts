@@ -2,21 +2,11 @@ import "./GenericItem.scss";
 
 export class GenericItem {
     private _container:HTMLElement;
-    private _spinner:HTMLElement;
     protected _children:GenericItem[] = [];
 
     constructor(type: string = "div") {
         this._container = document.createElement(type);
         this.addClass(this.constructor.name);
-
-        this.createSpinner();
-    }
-
-    private createSpinner():void {
-        this._spinner = document.createElement("div");
-        this._spinner.classList.add("Spinner");
-        this.getContainer().appendChild(this._spinner);
-        this.hideSpinner();
     }
 
     protected onMouseUp(e: MouseEvent):void {
@@ -82,9 +72,12 @@ export class GenericItem {
         this.getContainer().innerText = text;
     }
 
-    protected addChild(item: GenericItem):void {
-        this._children.push(item);
+    protected addChild(item: GenericItem, permanent:boolean = false):void {
         this.getContainer().appendChild(item.getContainer());
+
+        if(!permanent) {
+            this._children.push(item);
+        }
     }
 
     public getContainer():HTMLElement {
@@ -101,22 +94,5 @@ export class GenericItem {
 
     public addClass(className: string):void {
         this.getContainer().classList.add(className);
-    }
-
-    protected showSpinner():void {
-        this._spinner.classList.remove("hidden");
-    }
-
-    protected hideSpinner():void {
-        this._spinner.classList.add("hidden");
-    }
-
-    protected onLoadStart():void {
-
-    }
-
-    public load():void {
-        this.showSpinner();
-        this.onLoadStart();
     }
 }

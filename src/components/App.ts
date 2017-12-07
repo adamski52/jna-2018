@@ -7,6 +7,7 @@ import {IVisualBound} from "../interfaces/VisualBound.interface";
 import {Repo} from "./Repo";
 import {ReposService} from "../services/Repos.service";
 import {IRepo} from "../interfaces/Repo.interface";
+import {Header} from "./Header";
 
 export class App extends GenericItem {
     private _prevY:number = 0;
@@ -14,10 +15,16 @@ export class App extends GenericItem {
     constructor() {
         super("div");
 
+        this.createHeader();
         this.setupSubscriptions();
         this.setupScrolling();
 
         autoPlay(true);
+    }
+
+    private createHeader():void {
+        let header:Header = new Header();
+        this.addChild(header, true);
     }
 
     private createRepos(repos:IRepo[]):void {

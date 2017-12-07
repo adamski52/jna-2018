@@ -1,0 +1,14 @@
+@import "../styles/variables";
+
+.Header {
+  box-shadow: 0 0 $size-large rgba($color-dark, $opacity-light);
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: $color-light;
+  background: $color-dark;
+  text-align: right;
+  width: 100%;
+  z-index: 99999;
+  padding: $size-medium;
+}
