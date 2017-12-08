@@ -95,4 +95,8 @@ export class GenericItem {
     public addClass(className: string):void {
         this.getContainer().classList.add(className);
     }
+
+    public removeClass(className: string):void {
+        this.getContainer().classList.remove(className);
+    }
 }

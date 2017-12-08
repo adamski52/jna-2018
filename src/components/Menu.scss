@@ -1,0 +1,10 @@
+@import "../styles/variables";
+
+.Menu {
+  margin: 0;
+  background: $color-dark;
+  padding: 0;
+  height: $header-size;
+  overflow: visible;
+  float: right;
+}

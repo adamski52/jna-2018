@@ -1,0 +1,11 @@
+@import "../styles/variables";
+
+.MenuItem {
+  display: inline-block;
+  margin: 0;
+  padding: $size-medium;
+  color: $color-light;
+  width: $menu-size;
+  height: $header-size;
+  box-sizing: border-box;
+}

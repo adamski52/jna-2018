@@ -1,13 +1,23 @@
 import "./Header.scss";
 import {GenericItem} from "./GenericItem";
 import {Heading} from "./Heading";
+import {Menu} from "./Menu";
 
 export class Header extends GenericItem {
-    private _title:Heading;
-
     constructor() {
         super("div");
-        this._title = new Heading();
-        this.addChild(this._title);
+
+        this.createMenu();
+        this.createHeading();
+    }
+
+    private createHeading():void {
+        let heading:Heading = new Heading();
+        this.addChild(heading);
+    }
+
+    private createMenu():void {
+        let menu:Menu = new Menu();
+        this.addChild(menu);
     }
 }

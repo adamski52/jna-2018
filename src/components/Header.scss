@@ -1,6 +1,7 @@
 @import "../styles/variables";
 
 .Header {
+  box-sizing: border-box;
   box-shadow: 0 0 $size-large rgba($color-dark, $opacity-light);
   position: fixed;
   top: 0;
@@ -10,5 +11,6 @@
   text-align: right;
   width: 100%;
   z-index: 99999;
-  padding: $size-medium;
+  padding: 0;
+  height: $header-size;;
 }
