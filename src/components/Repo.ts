@@ -36,6 +36,9 @@ export class Repo extends GenericItem {
         this.createTitle(repo);
         this.createLanguageBar(repo);
         this.createCommitsContainer(repo);
+
+        this._languages.load();
+        this._commits.load();
     }
 
     private createBackground(repo:IRepo):void {
@@ -84,8 +87,6 @@ export class Repo extends GenericItem {
 
     protected onMouseEnter(e:MouseEvent):void {
         this.tweenScale(1);
-        this._languages.load();
-        this._commits.load();
     }
 
     protected onMouseLeave(e:MouseEvent):void {

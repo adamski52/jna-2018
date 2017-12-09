@@ -21,14 +21,31 @@ export class AllLanguagesService {
                 return;
             }
 
-            AllLanguagesService.languages.push(language);
+            let copiedLanguage:ILanguage = {
+                percentage: undefined,
+                name: language.name,
+                iconClass: language.iconClass
+            };
+
+            AllLanguagesService.languages.push(copiedLanguage);
         });
 
         let currentCount:number = AllLanguagesService.languages.length;
-
-        if(prevCount <= currentCount) {
+        if(currentCount <= prevCount) {
             return;
         }
+
+        AllLanguagesService.languages.sort((lhs:ILanguage, rhs:ILanguage) => {
+            if(lhs.name > rhs.name) {
+                return 1;
+            }
+
+            if(lhs.name > rhs.name) {
+                return -1;
+            }
+
+            return 0;
+        });
 
         AllLanguagesService.subject.next(AllLanguagesService.languages);
     }

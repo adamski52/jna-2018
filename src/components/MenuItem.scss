@@ -1,11 +1,32 @@
 @import "../styles/variables";
 
 .MenuItem {
-  display: inline-block;
+  display: block;
   margin: 0;
   padding: $size-medium;
-  color: $color-light;
+  text-align: left;
   width: $menu-size;
-  height: $header-size;
   box-sizing: border-box;
+  background: $color-light;
+  transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    background: darker($color-light, 5);
+  }
+
+  .Language {
+    float: none;
+    clear: none;
+    height: auto;
+    line-height: inherit;
+    background: none;
+    max-width: 100%;
+  }
+
+  .LanguageText {
+    color: #000;
+  }
 }
+
+

@@ -3,9 +3,11 @@
 .Heading {
   font-size: $font-size-medium;
   font-family: $font-accent;
-  margin: 0 $size-large 0 0;
+  margin: 0;
   padding: 0;
   line-height: $header-size;
   height: $header-size;
-  float: right;
+  position: fixed;
+  top: 0;
+  right: $header-size + $size-medium;
 }
