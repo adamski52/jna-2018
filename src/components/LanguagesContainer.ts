@@ -9,6 +9,7 @@ import {AsyncItem} from "./AsyncItem";
 export class LanguagesContainer extends AsyncItem {
     private _languagesService:LanguagesService = new LanguagesService();
     private _repo:IRepo;
+    private _languages:ILanguage[] = [];
 
     constructor(repo:IRepo) {
         super("div");
@@ -18,8 +19,14 @@ export class LanguagesContainer extends AsyncItem {
         this.setupSubscriptions();
     }
 
+    public getLanguages():ILanguage[] {
+        return this._languages;
+    }
+
     private setupSubscriptions():void {
         this._languagesService.subscribe((languages:ILanguage[]) => {
+            this._languages = languages;
+
             this.removeAllChildren();
             this.hideSpinner();
 

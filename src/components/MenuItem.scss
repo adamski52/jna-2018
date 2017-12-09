@@ -2,30 +2,48 @@
 
 .MenuItem {
   display: block;
-  margin: 0;
-  padding: $size-medium;
-  text-align: left;
   width: $menu-size;
-  box-sizing: border-box;
   background: $color-light;
-  transition: $transition;
+  height: $header-size;
+  line-height: $header-size;
+  vertical-align: middle;
+  padding: 0 $size-medium;
   cursor: pointer;
+
+  &::before {
+    color: $color-dark;
+    height: $header-size;
+    display: inline-block;
+    line-height: $header-size;
+    vertical-align: middle;
+  }
 
   &:hover {
     background: darker($color-light, 5);
   }
 
   .Language {
-    float: none;
-    clear: none;
-    height: auto;
-    line-height: inherit;
-    background: none;
     max-width: 100%;
+    background: none;
+    height: $header-size;
+    display: inline-block;
+    line-height: $header-size;
+    vertical-align: middle;
+
+    &::before {
+      height: $header-size;
+      display: inline-block;
+      line-height: $header-size;
+      vertical-align: middle;
+    }
   }
 
   .LanguageText {
-    color: #000;
+    color: $color-dark;
+    height: $header-size;
+    display: inline-block;
+    line-height: $header-size;
+    vertical-align: middle;
   }
 }
 

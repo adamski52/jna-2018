@@ -9,6 +9,9 @@ import {Tween, Easing} from "es6-tween";
 import {IRepo} from "../interfaces/Repo.interface";
 import {StyleUtils} from "../services/StyleUtils.service";
 import {IVisualBound} from "../interfaces/VisualBound.interface";
+import {MenuService} from "../services/Menu.service";
+import {IMenuState} from "../interfaces/MenuState.interface";
+import {ILanguage} from "../interfaces/Language.interface";
 
 export class Repo extends GenericItem {
     private _background:Background;
@@ -36,9 +39,35 @@ export class Repo extends GenericItem {
         this.createTitle(repo);
         this.createLanguageBar(repo);
         this.createCommitsContainer(repo);
+        this.setupSubscriptions();
 
         this._languages.load();
-        this._commits.load();
+    }
+
+    private setupSubscriptions():void {
+        MenuService.subscribe((state:IMenuState) => {
+            let repoLanguages:ILanguage[] = this._languages.getLanguages(),
+                remainingLanguages:ILanguage[];
+
+            remainingLanguages = repoLanguages.filter((language:ILanguage) => {
+                return state.disabledLanguages.indexOf(language.name) < 0;
+            });
+
+            if(remainingLanguages.length <= 0) {
+                this.hide();
+                return;
+            }
+
+            this.show();
+        });
+    }
+
+    private hide():void {
+        this.addClass("hidden");
+    }
+
+    private show():void {
+        this.removeClass("hidden");
     }
 
     private createBackground(repo:IRepo):void {

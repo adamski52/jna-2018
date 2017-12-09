@@ -8,22 +8,16 @@ export class MenuToggle extends GenericItem {
     constructor() {
         super("a");
 
-        this.setupSubscriptions();
         this.addClass("jna-icon-cog");
-    }
 
-    private setupSubscriptions():void {
-        MenuService.subscribe((menuState:IMenuState) => {
-            this.updateStyles(menuState);
+        this.getContainer().addEventListener("click", (e: MouseEvent) => {
+            this.onClick(e);
         });
     }
 
-    private updateStyles(menuState:IMenuState):void {
-        if(menuState.isOpen) {
-            this.addClass("open");
-        }
-        else {
-            this.removeClass("open");
-        }
+    private onClick(e:MouseEvent):void {
+        e.preventDefault();
+
+        MenuService.toggleMenu();
     }
 }

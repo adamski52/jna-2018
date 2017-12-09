@@ -26,4 +26,8 @@
       max-height: $commits-container-max-size;
     }
   }
+
+  &.hidden {
+    border: 10px solid #f00;
+  }
 }

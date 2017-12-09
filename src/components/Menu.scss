@@ -6,4 +6,11 @@
   position: fixed;
   top: 0;
   right: 0;
+  max-height: $header-size;
+  overflow: hidden;
+  transition: $transition;
+
+  &.open {
+    max-height: 100%;
+  }
 }

@@ -15,6 +15,10 @@ export class MenuItem extends GenericItem {
 
         this.createLanguageItem(language);
         this.setupSubscriptions();
+
+        this.getContainer().addEventListener("click", (e: MouseEvent) => {
+            this.onClick(e);
+        });
     }
 
     private createLanguageItem(language:ILanguage):void {
@@ -30,10 +34,18 @@ export class MenuItem extends GenericItem {
 
     private updateStyles(menuState:IMenuState):void {
         if(menuState.disabledLanguages.indexOf(this._language.name) < 0) {
-            this.removeClass("disabled");
+            this.removeClass("jna-icon-toggle-off");
+            this.addClass("jna-icon-toggle-on");
             return;
         }
 
-        this.addClass("disabled");
+        this.removeClass("jna-icon-toggle-on");
+        this.addClass("jna-icon-toggle-off");
+    }
+
+    protected onClick(e:MouseEvent):void {
+        e.preventDefault();
+
+        MenuService.toggleLanguage(this._language);
     }
 }
