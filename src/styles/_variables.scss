@@ -14,7 +14,8 @@ $commits-container-max-size: $item-size * 3;
 $language-icon-size: 25px;
 $title-size: 25px;
 
-$transition: all linear .3s;
+$transition-duration: .3s;
+$transition: all linear $transition-duration;
 
 $color-dark: #000;
 $color-medium: #444;

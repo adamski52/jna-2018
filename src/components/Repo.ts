@@ -12,13 +12,17 @@ import {IVisualBound} from "../interfaces/VisualBound.interface";
 import {MenuService} from "../services/Menu.service";
 import {IMenuState} from "../interfaces/MenuState.interface";
 import {ILanguage} from "../interfaces/Language.interface";
+import {LanguagesService} from "../services/Languages.service";
 
 export class Repo extends GenericItem {
     private _background:Background;
-    private _languages:LanguagesContainer;
-    private _commits:CommitsContainer;
+    private _languagesContainer:LanguagesContainer;
+    private _commitsContainer:CommitsContainer;
     private _title:Title;
+    private _languagesService:LanguagesService = new LanguagesService();
 
+    private _languages:ILanguage[];
+    private _menuState:IMenuState;
     private _scale:number;
     private _fixedScale:number;
     private _top:number;
@@ -37,36 +41,57 @@ export class Repo extends GenericItem {
         this.createEventListeners();
         this.createBackground(repo);
         this.createTitle(repo);
-        this.createLanguageBar(repo);
+        this.createLanguageBar();
         this.createCommitsContainer(repo);
         this.setupSubscriptions();
 
-        this._languages.load();
+        this._languagesService.get(repo);
+        this._commitsContainer.load();
     }
 
     private setupSubscriptions():void {
-        MenuService.subscribe((state:IMenuState) => {
-            let repoLanguages:ILanguage[] = this._languages.getLanguages(),
-                remainingLanguages:ILanguage[];
+        MenuService.subscribe((menuState: IMenuState) => {
+            this._menuState = menuState;
 
-            remainingLanguages = repoLanguages.filter((language:ILanguage) => {
-                return state.disabledLanguages.indexOf(language.name) < 0;
-            });
+            this.onMenuChange();
+        });
 
-            if(remainingLanguages.length <= 0) {
-                this.hide();
-                return;
-            }
+        this._languagesService.subscribe((languages: ILanguage[]) => {
+            this._languages = languages;
 
-            this.show();
+            this.onLanguagesLoaded();
         });
     }
 
+    private onLanguagesLoaded():void {
+        this._languagesContainer.setLanguages(this._languages);
+        this.onMenuChange();
+    }
+
+    private onMenuChange():void {
+        if(!this._menuState || !this._languages) {
+            return;
+        }
+
+        let remainingLanguages:ILanguage[] = this._languages.filter((language:ILanguage) => {
+            return this._menuState.disabledLanguages.indexOf(language.name) < 0;
+        });
+
+        if(remainingLanguages.length <= 0) {
+            this.hide();
+            return;
+        }
+
+        this.show();
+    }
+
     private hide():void {
+        this.tweenScale(0);
         this.addClass("hidden");
     }
 
     private show():void {
+        this.tweenScale(this._fixedScale);
         this.removeClass("hidden");
     }
 
@@ -80,14 +105,14 @@ export class Repo extends GenericItem {
         this.addChild(this._title);
     }
 
-    private createLanguageBar(repo:IRepo):void {
-        this._languages = new LanguagesContainer(repo);
-        this.addChild(this._languages);
+    private createLanguageBar():void {
+        this._languagesContainer = new LanguagesContainer();
+        this.addChild(this._languagesContainer);
     }
 
     private createCommitsContainer(repo:IRepo):void {
-        this._commits = new CommitsContainer(repo);
-        this.addChild(this._commits);
+        this._commitsContainer = new CommitsContainer(repo);
+        this.addChild(this._commitsContainer);
     }
 
     private tweenScale(scale:number):void {
