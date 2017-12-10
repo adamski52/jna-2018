@@ -3,6 +3,14 @@
 @import "assets/jna-icons.css";
 @import "styles/variables";
 
+.colored.devicon-csharp-plain {
+    color: lighter(#68217a, 30);
+}
+
+.colored.devicon-apache-plain {
+    color: lighter(#303284, 30);
+}
+
 body {
     padding: $size-large;
     font-family: $font-main;
