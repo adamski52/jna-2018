@@ -1,0 +1,25 @@
+@import "../styles/variables";
+
+.Heart {
+  box-sizing: border-box;
+  margin: $size-medium;
+  padding: $size-small $size-medium;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  line-height: 1;
+  background: rgba($color-light, .3);
+  border-radius: $language-icon-size;
+  transition: $transition-fast;
+
+  &.loading {
+    transform: scale(1.2);
+  }
+
+  &::before {
+    float: right;
+    margin-left: $size-medium;
+    color: $color-heart;
+  }
+}

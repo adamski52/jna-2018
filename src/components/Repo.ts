@@ -13,12 +13,14 @@ import {MenuService} from "../services/Menu.service";
 import {IMenuState} from "../interfaces/MenuState.interface";
 import {ILanguage} from "../interfaces/Language.interface";
 import {LanguagesService} from "../services/Languages.service";
+import {Heart} from "./Heart";
 
 export class Repo extends GenericItem {
     private _background:Background;
     private _languagesContainer:LanguagesContainer;
     private _commitsContainer:CommitsContainer;
     private _title:Title;
+    private _heart:Heart;
     private _languagesService:LanguagesService = new LanguagesService();
 
     private _languages:ILanguage[];
@@ -41,6 +43,7 @@ export class Repo extends GenericItem {
         this.createEventListeners();
         this.createBackground(repo);
         this.createTitle(repo);
+        this.createHeart(repo);
         this.createLanguageBar();
         this.createCommitsContainer(repo);
         this.setupSubscriptions();
@@ -98,6 +101,11 @@ export class Repo extends GenericItem {
     private createBackground(repo:IRepo):void {
         this._background = new Background(repo);
         this.addChild(this._background);
+    }
+
+    private createHeart(repo:IRepo):void {
+        this._heart = new Heart(repo);
+        this.addChild(this._heart);
     }
 
     private createTitle(repo:IRepo):void {

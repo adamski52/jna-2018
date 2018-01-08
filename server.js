@@ -10,13 +10,25 @@ var server = new WebpackDevServer(compiler, {
     hot: true,
     inline: true,
     proxy: {
+        "/jna": {
+            target: "localhost:8081",
+            pathRewrite: {
+                '^/jna': ''
+            },
+            changeOrigin: true,
+            headers: {
+                "User-Agent": "jonathanadamski.com",
+                "Content-Type": "application/json"
+            }
+        },
+
         "/api": {
             target: {
                 protocol: "https:",
                 host: "api.github.com"
             },
             pathRewrite: {
-                '^/api': '/'
+                '^/api': ''
             },
             changeOrigin: true,
             secure: false,

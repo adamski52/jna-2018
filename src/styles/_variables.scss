@@ -15,11 +15,13 @@ $language-icon-size: 25px;
 $title-size: 25px;
 
 $transition-duration: .3s;
+$transition-fast: all linear $transition-duration/2;
 $transition: all linear $transition-duration;
 
 $color-dark: #000;
 $color-medium: #444;
 $color-light: #fff;
+$color-heart: #c4000d;
 
 $font-size-base: 14px;
 $font-size-x-large: 1.4em;
@@ -29,7 +31,8 @@ $font-size-small: .6em;
 
 $size-large: 20px;
 $size-medium: 5px;
-$size-small: 1px;
+$size-small: 3px;
+$size-extra-small: 1px;
 
 $opacity-heavy: .8;
 $opacity-light: .5;
