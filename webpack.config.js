@@ -47,8 +47,13 @@ const config = {
     },
     module: {
         rules: [{
+            test: /.*jna-icons\.(css|eot|svg|ttf|woff)/,
+            use: [
+                loaders.assets
+            ]
+        }, {
             test: /.*devicon\.(css|eot|svg|ttf|woff)/,
-            use:[
+            use: [
                 loaders.assets
             ]
         }, {

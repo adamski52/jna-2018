@@ -1,36 +1,20 @@
 import "./LanguagesContainer.scss";
 
-import {LanguagesService} from "../services/Languages.service";
-import {IRepo} from "../interfaces/Repo.interface";
 import {ILanguage} from "../interfaces/Language.interface";
 import {Language} from "./Language";
-import {AsyncItem} from "./AsyncItem";
+import {GenericItem} from "./GenericItem";
 
-export class LanguagesContainer extends AsyncItem {
-    private _languagesService:LanguagesService = new LanguagesService();
-    private _repo:IRepo;
-
-    constructor(repo:IRepo) {
+export class LanguagesContainer extends GenericItem {
+    constructor() {
         super("div");
-
-        this._repo = repo;
-
-        this.setupSubscriptions();
     }
 
-    private setupSubscriptions():void {
-        this._languagesService.subscribe((languages:ILanguage[]) => {
-            this.removeAllChildren();
-            this.hideSpinner();
+    public setLanguages(languages:ILanguage[]):void {
+        this.removeAllChildren();
 
-            languages.forEach((language:ILanguage) => {
-                let languageItem:Language = new Language(language);
-                this.addChild(languageItem);
-            });
+        languages.forEach((language:ILanguage) => {
+            let languageItem:Language = new Language(language);
+            this.addChild(languageItem);
         });
-    }
-
-    protected onLoadStart():void {
-        this._languagesService.get(this._repo);
     }
 }

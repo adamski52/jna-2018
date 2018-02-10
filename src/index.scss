@@ -1,7 +1,15 @@
 @import "../node_modules/devicon-2.2/devicon.css";
 @import "../node_modules/devicon-2.2/devicon-colors.css";
-
+@import "assets/jna-icons.css";
 @import "styles/variables";
+
+.colored.devicon-csharp-plain {
+    color: lighter(#68217a, 30);
+}
+
+.colored.devicon-apache-plain {
+    color: lighter(#303284, 30);
+}
 
 body {
     padding: $size-large;

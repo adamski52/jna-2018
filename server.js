@@ -5,6 +5,8 @@ const WebpackDevServer= require("webpack-dev-server");
 const config = require("./webpack.config");
 const compiler = webpack(config);
 
+console.log("WAT", process.env.GITHUB_TOKEN);
+
 var server = new WebpackDevServer(compiler, {
     publicPath: "",
     hot: true,
@@ -16,7 +18,7 @@ var server = new WebpackDevServer(compiler, {
                 host: "api.github.com"
             },
             pathRewrite: {
-                '^/api': '/'
+                '^/api': ''
             },
             changeOrigin: true,
             secure: false,

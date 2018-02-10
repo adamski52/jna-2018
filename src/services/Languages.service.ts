@@ -5,6 +5,7 @@ import {LanguageMap} from "./LanguageMap.service";
 import {ILanguageMeta} from "../interfaces/LanguageMeta.interface";
 import {HttpService} from "./Http.service";
 import {IRepo} from "../interfaces/Repo.interface";
+import {AllLanguagesService} from "./AllLanguages.service";
 
 export class LanguagesService {
     private subject:BehaviorSubject<ILanguage[]> = new BehaviorSubject([]);
@@ -31,6 +32,8 @@ export class LanguagesService {
             languages.forEach((language: ILanguage) => {
                 language.percentage = Math.ceil((language.percentage / total) * 100);
             });
+
+            AllLanguagesService.addLanguages(languages);
 
             this.subject.next(languages);
         });

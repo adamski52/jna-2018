@@ -13,7 +13,6 @@ export class AsyncItem extends GenericItem {
         this._spinner = document.createElement("div");
         this._spinner.classList.add("Spinner");
         this.getContainer().appendChild(this._spinner);
-        this.hideSpinner();
     }
 
     public addClass(className: string):void {

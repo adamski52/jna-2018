@@ -1,0 +1,17 @@
+@import "../styles/variables";
+
+.MenuToggle {
+  font-size: $font-size-large;
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  color: $color-dark;
+  background: $color-light;
+  height: $header-size;
+  width: $header-size;
+  line-height: $header-size + 6px;
+  text-align: center;
+  cursor: pointer;
+}

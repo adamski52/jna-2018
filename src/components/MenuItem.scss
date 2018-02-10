@@ -1,0 +1,48 @@
+@import "../styles/variables";
+
+.MenuItem {
+  display: block;
+  width: $menu-size;
+  background: $color-light;
+  height: $header-size;
+  line-height: $header-size;
+  vertical-align: middle;
+  padding: 0 $size-medium;
+  cursor: pointer;
+
+  &::before {
+    color: $color-dark;
+    height: $header-size;
+    display: inline-block;
+    line-height: $header-size;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    background: darker($color-light, 5);
+  }
+
+  .Language {
+    max-width: 100%;
+    background: none;
+    height: $header-size;
+    display: inline-block;
+    line-height: $header-size;
+    vertical-align: middle;
+
+    &::before {
+      height: $header-size;
+      display: inline-block;
+      line-height: $header-size;
+      vertical-align: middle;
+    }
+  }
+
+  .LanguageText {
+    color: $color-dark;
+    height: $header-size;
+    display: inline-block;
+    line-height: $header-size;
+    vertical-align: middle;
+  }
+}

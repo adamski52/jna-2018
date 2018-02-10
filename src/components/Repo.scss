@@ -3,6 +3,7 @@
 .Repo {
   position: absolute;
   box-shadow: 0 0 $size-large rgba($color-dark, $opacity-light);
+  transition: opacity $transition-duration/2 linear;
 
   .Title,
   .LanguagesContainer {
@@ -25,5 +26,9 @@
     .CommitsContainer {
       max-height: $commits-container-max-size;
     }
+  }
+
+  &.hidden {
+    opacity: 0;
   }
 }
