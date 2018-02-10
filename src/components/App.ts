@@ -32,8 +32,6 @@ export class App extends GenericItem {
 
         let top:number = 0;
         repos.forEach((repo:IRepo) => {
-            console.log(repo);
-
             let item:Repo = new Repo(repo),
                 scale:number = .1 + (Math.random() *.8),
                 left:number = Math.max(0, -item.getVisualBounds().width + Math.random() * (window.innerWidth));

@@ -16,14 +16,22 @@ export class HeartService {
     }
 
     public get():void {
-        HttpService.get("/jna/repos/" + this.repo.name, (response: number) => {
-            this.subject.next(response);
+        HttpService.get("http://www.maintaincomposure.com/api/repos/" + this.repo.name, (response: any) => {
+            if(!response || !response.data) {
+                this.subject.next(0);
+                return;
+            }
+            this.subject.next(parseInt(response.data.hearts));
         });
     }
 
     public post():void {
-        HttpService.post("/jna/repos/" + this.repo.name, (response:number) => {
-            this.subject.next(response);
+        HttpService.post("http://www.maintaincomposure.com/api/repos/" + this.repo.name, (response:any) => {
+            if(!response || !response.data) {
+                this.subject.next(0);
+                return;
+            }
+            this.subject.next(parseInt(response.data.hearts));
         });
     }
 }

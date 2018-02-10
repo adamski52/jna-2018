@@ -5,23 +5,13 @@ const WebpackDevServer= require("webpack-dev-server");
 const config = require("./webpack.config");
 const compiler = webpack(config);
 
+console.log("WAT", process.env.GITHUB_TOKEN);
+
 var server = new WebpackDevServer(compiler, {
     publicPath: "",
     hot: true,
     inline: true,
     proxy: {
-        "/jna": {
-            target: "localhost:8081",
-            pathRewrite: {
-                '^/jna': ''
-            },
-            changeOrigin: true,
-            headers: {
-                "User-Agent": "jonathanadamski.com",
-                "Content-Type": "application/json"
-            }
-        },
-
         "/api": {
             target: {
                 protocol: "https:",
