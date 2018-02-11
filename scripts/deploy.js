@@ -13,7 +13,7 @@ tar.c({
 }, ["."]).then(function() {
     console.log("Created " + nameTgz);
 
-    scpClient.upload(nameTgz, "~/" + nameTgz, function(error) {
+    scpClient.upload(nameTgz, "/home3/jon/" + nameTgz, function(error) {
         if(error) {
             console.error(error);
             process.exitCode = 1;
@@ -23,8 +23,8 @@ tar.c({
         console.log("SCP finished.");
 
         utils.do([
-            "tar -xvf ~/" + nameTgz + " -C ~/public_html",
-            "rm ~/" + nameTgz
+            "tar -xvf /home3/jon/" + nameTgz + " -C /home3/jon/public_html",
+            "rm /home3/jon/" + nameTgz
         ]);
     });
 }).catch(function(error) {
