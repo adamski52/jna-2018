@@ -15,7 +15,7 @@ export class LanguagesService {
     }
 
     public get(repo:IRepo):void {
-        HttpService.get("/api/repos/adamski52/" + repo.name + "/languages", (response: ILanguageMeta) => {
+        HttpService.get("http://www.maintaincomposure.com/git/repos/adamski52/" + repo.name + "/languages", (response: ILanguageMeta) => {
             let languages: ILanguage[] = [],
                 total: number = 0;
 

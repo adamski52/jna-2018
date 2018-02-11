@@ -12,7 +12,7 @@ export class CommitsService {
     }
 
     public get(repo:IRepo):void {
-        HttpService.get("/api/repos/adamski52/" + repo.name + "/commits", (response: ICommit[]) => {
+        HttpService.get("http://www.maintaincomposure.com/git/repos/adamski52/" + repo.name + "/commits", (response: ICommit[]) => {
             this.subject.next(response);
         });
     }

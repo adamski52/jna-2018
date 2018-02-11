@@ -11,7 +11,7 @@ export class ReposService {
     }
 
     public static get():void {
-        HttpService.get("/api/users/adamski52/repos", (response:IRepo[]) => {
+        HttpService.get("http://www.maintaincomposure.com/git/users/adamski52/repos", (response:IRepo[]) => {
             this.subject.next(response);
         });
     }
