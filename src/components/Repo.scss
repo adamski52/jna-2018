@@ -6,6 +6,8 @@
   transition: opacity $transition-duration/2 linear;
 
   .Title,
+  .Heart,
+  .ViewButtonsContainer,
   .LanguagesContainer {
     transition: $transition;
     opacity: 0;
@@ -19,6 +21,8 @@
 
   &:hover {
     .Title,
+    .Heart,
+    .ViewButtonsContainer,
     .LanguagesContainer {
       opacity: 1;
     }

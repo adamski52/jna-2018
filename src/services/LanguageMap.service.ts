@@ -1,4 +1,6 @@
 export class LanguageMap {
+    // TODO:  All of this should move to the API.
+
     public static OTHER:string = "devicon-plain";
     public static NPM:string = "npm-original-wordmark";
     public static IONIC:string = "ionic-original";

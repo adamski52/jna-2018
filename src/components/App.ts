@@ -8,14 +8,19 @@ import {Repo} from "./Repo";
 import {ReposService} from "../services/Repos.service";
 import {IRepo} from "../interfaces/Repo.interface";
 import {Header} from "./Header";
+import {ErrorService} from "../services/Error.service";
+import {ErrorContainer} from "./ErrorContainer";
 
 export class App extends GenericItem {
     private _prevY:number = 0;
+    private _header:Header;
+    private _errorContainer:ErrorContainer;
 
     constructor() {
         super("div");
 
         this.createHeader();
+        this.createErrorContainer();
         this.setupSubscriptions();
         this.setupScrolling();
 
@@ -23,8 +28,13 @@ export class App extends GenericItem {
     }
 
     private createHeader():void {
-        let header:Header = new Header();
-        this.addChild(header, true);
+        this._header = new Header();
+        this.addChild(this._header, true);
+    }
+
+    private createErrorContainer():void {
+        this._errorContainer = new ErrorContainer();
+        this.addChild(this._errorContainer, true);
     }
 
     private createRepos(repos:IRepo[]):void {
@@ -47,6 +57,12 @@ export class App extends GenericItem {
     }
 
     private setupSubscriptions():void {
+        ErrorService.subscribe((error:any) => {
+            if(error.status === 403 && error.statusText === "Forbidden") {
+                this._errorContainer.show("Oh no!  We've reached the GitHub API Rate Limit!  I must be popular.  Please try back in about an hour.");
+            }
+        });
+
         ReposService.subscribe((repos:IRepo[]) => {
             this.createRepos(repos);
         });

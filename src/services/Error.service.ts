@@ -1,8 +1,8 @@
-import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {Subscription} from "rxjs/Subscription";
+import {Subject} from "rxjs/Subject";
 
 export class ErrorService {
-    private static subject:BehaviorSubject<any> = new BehaviorSubject({});
+    private static subject:Subject<any> = new Subject();
 
     public static subscribe(callback:(response:any) => void):Subscription {
         return this.subject.subscribe(callback);

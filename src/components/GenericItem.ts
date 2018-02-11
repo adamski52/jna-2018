@@ -64,14 +64,6 @@ export class GenericItem {
         });
     }
 
-    protected setStyle(property: string, value: string | number):void {
-        this.getContainer().style[property] = value;
-    }
-
-    protected setText(text: string):void {
-        this.getContainer().innerText = text;
-    }
-
     protected addChild(item: GenericItem, permanent:boolean = false):void {
         this.getContainer().appendChild(item.getContainer());
 
@@ -79,6 +71,19 @@ export class GenericItem {
             this._children.push(item);
         }
     }
+
+    public setAttribute(name:string, value:string):void {
+        this.getContainer().setAttribute(name, value);
+    }
+
+    public setStyle(property: string, value: string | number):void {
+        this.getContainer().style[property] = value;
+    }
+
+    public setText(text: string):void {
+        this.getContainer().innerText = text;
+    }
+
 
     public getContainer():HTMLElement {
         return this._container;

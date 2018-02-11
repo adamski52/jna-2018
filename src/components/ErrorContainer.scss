@@ -1,0 +1,27 @@
+@import "../styles/variables";
+
+.ErrorContainer {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  box-sizing: border-box;
+  padding: $size-large;
+  margin: 0;
+  width: 100%;
+  color: $color-error-text;
+  background: $color-error;
+  transition: $transition;
+  box-shadow: 0 0 $size-large rgba($color-dark, $opacity-light);
+  text-align: center;
+  z-index: 99999;
+  font-size: $font-size-small;
+  font-family: $font-accent;
+
+  &.open {
+    bottom: 0;
+  }
+
+  .close-btn {
+
+  }
+}

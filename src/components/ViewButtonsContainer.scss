@@ -1,16 +1,15 @@
 @import "../styles/variables";
 
-.Title {
+.ViewButtonsContainer {
   box-sizing: border-box;
   transition: $transition;
   position: absolute;
   padding-right: $size-medium;
   margin: 0;
-  top: $item-size - $title-size;
+  top: $item-size - $title-size - $title-size;
   height: $title-size;
   line-height: $title-size;
   width: $item-size;
-  background: $color-dark;
-  color: $color-light;
   text-align: right;
+  font-family: $font-main;
 }

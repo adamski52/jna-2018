@@ -1,0 +1,44 @@
+@import "../styles/variables";
+
+.ViewButton {
+  box-sizing: border-box;
+  padding: $size-small;
+  border-radius: $size-small;
+  margin: 0 $size-small;
+  height: $title-size;
+  line-height: $title-size;
+  text-decoration: none;
+  color: $color-light;
+  font-size: $font-size-medium;
+  font-family: $font-main;
+
+  &::before {
+    line-height: $title-size;
+    margin-right: $size-small;
+    vertical-align: top;
+  }
+
+  &.view-live {
+    background: $color-view-live;
+
+    &:hover {
+      background: lighter($color-view-live, 20%);
+    }
+
+    &::before {
+      font-family: $font-jna;
+    }
+  }
+
+  &.view-code {
+    background: $color-view-code;
+
+    &:hover {
+      background: lighter($color-view-code, 20%);
+    }
+
+    &::before {
+      font-family: $font-icon;
+    }
+  }
+}

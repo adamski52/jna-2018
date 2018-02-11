@@ -14,11 +14,14 @@ import {IMenuState} from "../interfaces/MenuState.interface";
 import {ILanguage} from "../interfaces/Language.interface";
 import {LanguagesService} from "../services/Languages.service";
 import {Heart} from "./Heart";
+import {ViewButton} from "./ViewButton";
+import {ViewButtonsContainer} from "./ViewButtonsContainer";
 
 export class Repo extends GenericItem {
     private _background:Background;
     private _languagesContainer:LanguagesContainer;
     private _commitsContainer:CommitsContainer;
+    private _viewButtonsContainer:ViewButtonsContainer;
     private _title:Title;
     private _heart:Heart;
     private _languagesService:LanguagesService = new LanguagesService();
@@ -45,6 +48,7 @@ export class Repo extends GenericItem {
         this.createTitle(repo);
         this.createHeart(repo);
         this.createLanguageBar();
+        this.createViewButtonsContainer(repo);
         this.createCommitsContainer(repo);
         this.setupSubscriptions();
 
@@ -121,6 +125,11 @@ export class Repo extends GenericItem {
     private createCommitsContainer(repo:IRepo):void {
         this._commitsContainer = new CommitsContainer(repo);
         this.addChild(this._commitsContainer);
+    }
+
+    private createViewButtonsContainer(repo:IRepo):void {
+        this._viewButtonsContainer = new ViewButtonsContainer(repo);
+        this.addChild(this._viewButtonsContainer);
     }
 
     private tweenScale(scale:number):void {
