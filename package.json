@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "karma start",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "node scripts/deploy.js"
   },
   "author": "",
   "license": "ISC",
